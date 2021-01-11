@@ -1,0 +1,37 @@
+{
+  "id": "2181084",
+  "name": "高血压质控",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7450657",
+      "name": "展开",
+      "font_class": "zhankai",
+      "unicode": "e668",
+      "unicode_decimal": 58984
+    },
+    {
+      "icon_id": "1255992",
+      "name": "向左",
+      "font_class": "xiangzuo",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "7550221",
+      "name": "更多_竖",
+      "font_class": "gengduo",
+      "unicode": "e68d",
+      "unicode_decimal": 59021
+    },
+    {
+      "icon_id": "6010945",
+      "name": "2-最小化",
+      "font_class": "-zuixiaohua",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    }
+  ]
+}
