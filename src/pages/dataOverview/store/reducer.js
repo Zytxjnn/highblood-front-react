@@ -14,11 +14,11 @@ function reducer(state = defaultState,action){
     case actionTypes.CHANGE_CONTENT:
       return state.set('content',action.content);
     case actionTypes.CHANGE_PROVINCE:
-      return state.set('content',action.province);
+      return state.set('province',action.province);
     case actionTypes.CHANGE_CITY:
-      return state.set('content',action.city);
+      return state.set('city',action.city);
     case actionTypes.CHANGE_GRADE:
-      return state.set('content',action.grade);
+      return state.set('grade',action.grade);
     default:
       return state;
   }

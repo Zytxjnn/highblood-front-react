@@ -15,11 +15,13 @@ export const getDataByProvince = province => {
   })
 }
 
-export const getDataByCity = city => {
+export const getDataByCity = (province,city) => {
   return axios({
     url:'/getNumInfoByProvince',
     params:{
+      province,
       city
     }
   })
 }
+

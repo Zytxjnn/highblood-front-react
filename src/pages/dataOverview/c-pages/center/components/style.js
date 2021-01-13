@@ -37,6 +37,7 @@ export const ChunkWrapper = styled.div`
   .info-count span{
     color:#FCFF0C;
     font-size: 5vh;
+    
     font-weight: bold;
   }
 `
