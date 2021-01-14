@@ -56,3 +56,14 @@ export const getCityAction = (city) => {
     dispatch(changCityAction(city));
   }
 }
+
+export const changGradeAction = (grade) => ({
+  type:actionTypes.CHANGE_GRADE,
+  grade,
+})
+
+export const getGradeAction = (grade) => {
+  return dispatch => {
+    dispatch(changGradeAction(grade));
+  }
+}

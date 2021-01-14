@@ -1,5 +1,5 @@
 import React,{memo,useEffect,useState} from "react";
-import {shallowEqual, useDispatch, useSelector} from "react-redux";
+import {shallowEqual, useDispatch,useSelector} from "react-redux";
 import axios from "axios";
 
 import * as echarts from 'echarts';
@@ -16,34 +16,38 @@ import {
   getContentByProvinceAction,
   getContentByCityAction,
   getProvinceAction,
-  getCityAction, getContentAction
+  getCityAction,
+  getGradeAction, getContentAction
 } from '@/pages/dataOverview/store/actionCreator';
 import {
   BotWrapper,
   TopWrapper,
   Wrapper
 } from "./style";
-import Chunk from './components/chunk';
+import Chunk from './components/chunk/chunk';
+import Histogram from './components/histogram/histogram';
 
 
 echarts.registerMap('china', china);
 
-export default memo(function DataViewCenter(){
+
+  export default memo(function DataViewCenter(){
   // props and state
   let map = null;
-  // const [Province,setProvince] = useState('');
-  // const [City,setCity] = useState('');
   const provinces = ['shanghai', 'hebei', 'shanxi', 'neimenggu', 'liaoning', 'jilin', 'heilongjiang', 'jiangsu', 'zhejiang', 'anhui', 'fujian', 'jiangxi', 'shandong', 'henan', 'hubei', 'hunan', 'guangdong', 'guangxi', 'hainan', 'sichuan', 'guizhou', 'yunnan', 'xizang', 'shanxi1', 'gansu', 'qinghai', 'ningxia', 'xinjiang', 'beijing', 'tianjin', 'chongqing', 'xianggang', 'aomen', 'taiwan']
   const provincesText = ['上海', '河北', '山西', '内蒙古', '辽宁', '吉林', '黑龙江', '江苏', '浙江', '安徽', '福建', '江西', '山东', '河南', '湖北', '湖南', '广东', '广西', '海南', '四川', '贵州', '云南', '西藏', '陕西', '甘肃', '青海', '宁夏', '新疆', '北京', '天津', '重庆', '香港', '澳门', '台湾'];
 
 
 
   // other hooks
-  const {content,province,city} = useSelector(state => ({
-    content:state.getIn(['dataOverview','content']),
-    province:state.getIn(['dataOverview','province']),
-    city:state.getIn(['dataOverview','city']),
-  }),shallowEqual);
+  const {content,province,city,grade} = useSelector(state => {
+    return {
+      content:state.getIn(['dataOverview','content']),
+      province:state.getIn(['dataOverview','province']),
+      city:state.getIn(['dataOverview','city']),
+      grade:state.getIn(['dataOverview','grade']),
+    }
+  });
 
   const dispatch = useDispatch();
   useEffect(() =>{
@@ -112,25 +116,31 @@ export default memo(function DataViewCenter(){
   }
 
   const getProvinceMapOpt = (provinceAlphabet,provinceName) =>{
+    map = echarts.init(document.getElementById('map'));
     axios.get('geo/province/' + provinceAlphabet + '.json').then(s => {
       echarts.registerMap(provinceAlphabet,s.data);
       const option = getMapOpt(provinceAlphabet);
-      map.setOption(option,true);
 
-      getProvinceDataAndSet(provinceName);
+      map.setOption(option,true);
+      getProvinceDataAndSet(provinceName);  // dispatch action 修改 redux 中数据
 
       map.off('click');
 
-      map.on('click',param => {
+      map.on('click',param => { // 给下级添加点击事件
         getCityMapOpt(param.name);
       })
     })
   }
 
   const getProvinceDataAndSet = (provinceName) => { // 获取并设置省级数据
-    dispatch(getProvinceAction(provinceName));
-    dispatch(getContentByProvinceAction(provinceName));
+    dispatch(getProvinceAction(provinceName));  // 改变当前所在 province
+    dispatch(getContentByProvinceAction(provinceName)); // 改变当前数据
+    dispatch(getGradeAction(2)); // 改变层级
   }
+
+  useEffect(() => { // 监听 city 改变
+    city && dispatch(getContentByCityAction(province,city));
+  },[city]);
 
 
   const getCityMapOpt = (cityName) => {
@@ -147,11 +157,29 @@ export default memo(function DataViewCenter(){
     })
   }
 
-  const getCityDataAndSet = (cityName) => { // 获取并设置市级数据
-    dispatch(getCityAction(cityName));
-    dispatch(getContentByCityAction(province,cityName));
+  const getCityDataAndSet = (cityName) => { // 市级数据处理
+    dispatch(getCityAction(cityName));  // 改变当前 city
+    dispatch(getGradeAction(3));  // 改变层级
   }
 
+  const back = () => {  // 地图返回
+    switch (grade){
+      case 2:
+        initalMap();
+        dispatch(getContentAction());
+        dispatch(getGradeAction(1));
+        dispatch(getProvinceAction(''));
+        break;
+      case 3:
+        getProvinceMapOpt('jiangsu',province);
+        dispatch(getContentByProvinceAction(province));
+        dispatch(getGradeAction(2));
+        dispatch(getCityAction(''));
+        break;
+      default:
+        break;
+    }
+  }
 
   return (
     <>
@@ -164,9 +192,10 @@ export default memo(function DataViewCenter(){
           </div>
           <div id="map">
           </div>
+          {grade > 1 && <div className="back" onClick={() => {back()}}>返回</div> }
         </TopWrapper>
-       <BotWrapper>
-
+        <BotWrapper>
+          <Histogram/>
        </BotWrapper>
      </Wrapper>
     </>

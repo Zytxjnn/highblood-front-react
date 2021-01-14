@@ -1,2 +1,7 @@
 @import "./normalize.css";
 @import "~antd/dist/antd.css";
+
+body{
+  font-family: Microsoft YaHei;
+}
+

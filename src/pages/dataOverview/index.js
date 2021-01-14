@@ -5,6 +5,8 @@ import {Row,Col} from 'antd'
 
 import DataHeader from '@/components/dataHeader';
 import DataViewCenter from './c-pages/center';
+import DataViewLeft from './c-pages/left';
+import DataViewRight from './c-pages/right';
 
 import {
   Wrapper
@@ -28,13 +30,13 @@ export default memo(function DataOverview(props){
       <DataHeader />
       <Row>
         <Col span={6}>
-          1
+          <DataViewLeft/>
         </Col>
         <Col span={12}>
           <DataViewCenter />
         </Col>
         <Col span={6}>
-          3
+          <DataViewRight/>
         </Col>
       </Row>
     </Wrapper>
