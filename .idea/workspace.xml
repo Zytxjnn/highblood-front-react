@@ -2,41 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1aae494-153c-41fb-8ac4-a9b5af5417a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/components/histogram/histogram.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/components/histogram/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/normal/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/normal/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/rank/rank.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/rank/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/components/bing/bing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/components/bing/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/components/normal/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/components/normal/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/network/dataReporting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-coms/nextBtn/nextBtn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-coms/nextBtn/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-coms/preBtn/preBtn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-coms/preBtn/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-coms/nextBtn/nextBtn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-coms/nextBtn/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-coms/preBtn/preBtn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-coms/preBtn/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/chunk/chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/chunk/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/logs/logs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/logs/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/rank/rank.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/rank/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/state/state.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/state/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/right/components/rank/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/right/components/rank/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/right/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/right/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/store/actionCreator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/store/constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/store/reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dataReporting/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/reset.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataOverview/center-bot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/dataOverview/center-bot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataOverview/中下.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataOverview/左上.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataOverview/左下.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataOverview/建设中.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataOverview/标题.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataOverview/通过.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dataHeader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dataHeader/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dataHeader/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dataHeader/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/components/chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/components/chunk/chunk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/components/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/components/chunk/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataOverview/右.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataOverview/右上.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataOverview/右下.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataOverview/圆.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataOverview/左.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataOverview/左上2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataOverview/左下2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataReproting/中下.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataReproting/右下.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataReproting/左上2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataReproting/左下.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/store/actionCreator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/store/actionCreator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +80,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/dataOverview/c-pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -80,13 +94,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\newCode\react\highblood-front\src\pages\dataOverview\c-pages" />
-      <recent name="D:\newCode\react\highblood-front\src\assets\imgs\dataOverview" />
+      <recent name="D:\newCode\react\highblood-front\src\pages\dataReporting" />
+      <recent name="D:\newCode\react\highblood-front\src\pages\dataReporting\c-coms" />
       <recent name="D:\newCode\react\highblood-front\node_modules\echarts" />
-      <recent name="D:\newCode\react\highblood-front\src\assets\geo" />
-      <recent name="D:\newCode\react\highblood-front\src\assets\imgs\qualityIndicators" />
+      <recent name="D:\newCode\react\highblood-front\src\pages\dataOverview" />
+      <recent name="D:\newCode\react\highblood-front\src\pages\dataOverview\c-coms" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\newCode\react\highblood-front\src\pages\dataReporting\c-pages\center\components\logs" />
       <recent name="D:\newCode\react\highblood-front\src\pages\dataOverview\c-pages\left" />
       <recent name="D:\newCode\react\highblood-front\src\pages\dataOverview\c-pages\center\components\chunk" />
       <recent name="D:\newCode\react\highblood-front\src" />
@@ -114,11 +129,23 @@
       <workItem from="1610540645568" duration="3000" />
       <workItem from="1610541138722" duration="760000" />
       <workItem from="1610592803575" duration="20688000" />
+      <workItem from="1610678123710" duration="19156000" />
+      <workItem from="1610762439717" duration="19380000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/styled-components/dist/styled-components.esm.js</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

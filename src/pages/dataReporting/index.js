@@ -14,17 +14,13 @@ import {
   Wrapper
 } from "./style";
 
-import {getContentAction} from './store/actionCreator'
+import {getCountAction} from './store/actionCreator'
 
 export default memo(function DataOverview(props){
 
-  // const {content} = useSelector(state => ({
-  //   content:state.getIn(['dataOverview','content'])
-  // }),shallowEqual)
-
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getContentAction());
+    dispatch(getCountAction());
   },[dispatch]);
 
   return (
