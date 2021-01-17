@@ -3,7 +3,7 @@ import {shallowEqual, useDispatch,useSelector} from "react-redux";
 import axios from "axios";
 
 import * as echarts from 'echarts';
-import china from 'echarts/map/json/china';
+import china from '@/assets/json/china.json';
 import icon1 from '@/assets/imgs/dataOverview/1.png';
 import icon2 from '@/assets/imgs/dataOverview/2.png';
 import icon3 from '@/assets/imgs/dataOverview/3.png';
@@ -12,13 +12,15 @@ import {cityMap} from '@/common/data-local.js'
 
 
 import {
-  // getContentAction,
+  getContentAction,
   getContentByProvinceAction,
   getContentByCityAction,
+} from '@/pages/dataOverview/store/actionCreator';
+import {
   getProvinceAction,
   getCityAction,
-  getGradeAction, getContentAction
-} from '@/pages/dataOverview/store/actionCreator';
+  getGradeAction,
+} from '@/pages/dataReporting/store/actionCreator'
 import {
   BotWrapper,
   TopWrapper,
@@ -34,6 +36,7 @@ echarts.registerMap('china', china);
   export default memo(function DataViewCenter(){
   // props and state
   let map = null;
+    const [ProvinceAlphabet,setProvinceAlphabet] = useState('');
   const provinces = ['shanghai', 'hebei', 'shanxi', 'neimenggu', 'liaoning', 'jilin', 'heilongjiang', 'jiangsu', 'zhejiang', 'anhui', 'fujian', 'jiangxi', 'shandong', 'henan', 'hubei', 'hunan', 'guangdong', 'guangxi', 'hainan', 'sichuan', 'guizhou', 'yunnan', 'xizang', 'shanxi1', 'gansu', 'qinghai', 'ningxia', 'xinjiang', 'beijing', 'tianjin', 'chongqing', 'xianggang', 'aomen', 'taiwan']
   const provincesText = ['上海', '河北', '山西', '内蒙古', '辽宁', '吉林', '黑龙江', '江苏', '浙江', '安徽', '福建', '江西', '山东', '河南', '湖北', '湖南', '广东', '广西', '海南', '四川', '贵州', '云南', '西藏', '陕西', '甘肃', '青海', '宁夏', '新疆', '北京', '天津', '重庆', '香港', '澳门', '台湾'];
 
@@ -43,16 +46,39 @@ echarts.registerMap('china', china);
   const {content,province,city,grade} = useSelector(state => {
     return {
       content:state.getIn(['dataOverview','content']),
-      province:state.getIn(['dataOverview','province']),
-      city:state.getIn(['dataOverview','city']),
-      grade:state.getIn(['dataOverview','grade']),
+      province:state.getIn(['dataReporting','province']),
+      city:state.getIn(['dataReporting','city']),
+      grade:state.getIn(['dataReporting','grade']),
     }
   });
 
   const dispatch = useDispatch();
-  useEffect(() =>{
-    initalMap();
-  },[]);
+    useEffect(() =>{
+      switch (grade){
+        case 2:
+          var provinceIndex = provincesText.findIndex(x => {
+            return province === x
+          });
+          if (provinceIndex === -1) return;
+          var provinceAlphabet = provinces[provinceIndex];
+          setProvinceAlphabet(provinceAlphabet);
+
+          getProvinceMapOpt(provinceAlphabet,province);
+          break;
+        case 3:
+          var provinceIndex = provincesText.findIndex(x => {
+            return province === x
+          });
+          if (provinceIndex === -1) return;
+          var provinceAlphabet = provinces[provinceIndex];
+          setProvinceAlphabet(provinceAlphabet);
+          getCityMapOpt(city);
+          break;
+        default:
+          initalMap();
+          break;
+      }
+    },[]);
 
 
   // 业务逻辑
@@ -144,6 +170,7 @@ echarts.registerMap('china', china);
 
 
   const getCityMapOpt = (cityName) => {
+    map = echarts.init(document.getElementById('map'));
     // 将城市名称转为邮政编码
     const code = cityMap[cityName];
     axios.get('geo/city/' + code + '.json').then(s => {
@@ -171,8 +198,8 @@ echarts.registerMap('china', china);
         dispatch(getProvinceAction(''));
         break;
       case 3:
-        getProvinceMapOpt('jiangsu',province);
-        dispatch(getContentByProvinceAction(province));
+        getProvinceMapOpt(ProvinceAlphabet,province);
+
         dispatch(getGradeAction(2));
         dispatch(getCityAction(''));
         break;

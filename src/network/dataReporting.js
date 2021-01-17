@@ -1,5 +1,6 @@
-import {dataReporting as axios,qualityIndicators } from "./request";
-import Qs from 'qs'
+import {dataReporting as axios,dataCharts } from "./request";
+import Axios from "axios";
+import Qs from 'qs';
 
 // 地图上方三个数字
 export const getCount = () => {
@@ -49,8 +50,8 @@ export const getLogsByCity = (city) => {
 
 // 质控分数排名
 export const getScoreList = (area_type,data_type) => {
-  return qualityIndicators.post(
-    '/getScoreList',
+  return Axios.post(
+    'http://hbqc.ccpmc.org/QualityControlScore/getScoreList',
     Qs.stringify({
       area_type,
       data_type
@@ -60,8 +61,8 @@ export const getScoreList = (area_type,data_type) => {
 
 
 export const getScoreListByProvince = (area_type,data_type,province) => {
-  return qualityIndicators.post(
-    '/getScoreList',
+  return Axios.post(
+    'http://hbqc.ccpmc.org/QualityControlScore/getScoreList',
     Qs.stringify({
       area_type,
       data_type,
@@ -71,8 +72,8 @@ export const getScoreListByProvince = (area_type,data_type,province) => {
 }
 
 export const getScoreListByCity = (area_type,data_type,city) => {
-  return qualityIndicators.post(
-    '/getScoreList',
+  return Axios.post(
+    'http://hbqc.ccpmc.org/QualityControlScore/getScoreList',
     Qs.stringify({
       area_type,
       data_type,

@@ -17,8 +17,6 @@ export default memo(function (props){
     const path = location.pathname;
     if(path === '/'){
       history.push('/dataReporting')
-    }else{
-      history.push('/dataCharts')
     }
   }
   return <Wrapper onClick={() => {navTo()}} />

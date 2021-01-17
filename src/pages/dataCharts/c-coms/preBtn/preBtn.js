@@ -10,15 +10,8 @@ import {
 
 export default memo(function (props){
 
-  let path = '/';
-  const location = useLocation();
-  useEffect(() => {
-    if (location.pathname === '/'){
-      path = '/';
-    }else{
-      path = '/dataReporting';
-    }
-  },[location.pathname])
+  let path = '/dataReporting';
+
 
   return <Wrapper>
     <NavLink to={path} />

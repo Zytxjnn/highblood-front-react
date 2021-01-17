@@ -36,6 +36,7 @@ export default memo(function (props){
                             trailColor='#193F80'
                             showInfo={false}
                   />
+                  <div className="score">{item.num}</div>
                 </div>
               </div>
             )

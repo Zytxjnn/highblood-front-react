@@ -3,6 +3,7 @@ import styled from "styled-components";
 import bg from '@/assets/imgs/dataOverview/chunk.png'
 
 export const ChunkWrapper = styled.div`
+  position: relative;
   background: url(${bg});
   background-size: 100% 100%;
   width: 30%;
@@ -38,6 +39,19 @@ export const ChunkWrapper = styled.div`
     color:#FCFF0C;
     font-size: 1.6vw;
     font-weight: bold;
+  }
+  
+  .ant-spin{
+    position:absolute;
+    width:100%;
+    height:100%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
   }
 `
 

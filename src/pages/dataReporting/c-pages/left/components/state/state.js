@@ -1,21 +1,26 @@
-import React,{memo,useEffect} from 'react';
+import React,{memo,useEffect,useState} from 'react';
 import {useSelector} from "react-redux";
 
 import {
   Wrapper,
 } from './style';
 import * as echarts from 'echarts'
+import {
+  Spin
+} from 'antd';
+import { LoadingOutlined } from '@ant-design/icons';
 
-import axios from "axios";
 
 
 export default memo(function (props){
-
+  const [isLoading,setIsLoading] = useState(true);
   const {all_count} = useSelector(state => ({
     all_count:state.getIn(['dataReporting','all_count'])
-  }))
+  }));
+  const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
   useEffect(() => {
+
     let chart = echarts.init(document.getElementById('blChart'));
     const option = {
       tooltip: {
@@ -23,28 +28,15 @@ export default memo(function (props){
           formatter: '{a} <br/>{b}: {c} ({d}%)'
       },
       legend: {
-        x:'right',
+          x:'right',
           y:'center',
           orient: 'vertical',
           textStyle:{
           color:'#fff',
             fontSize:16
         },
-        itemGap:20
-      },
-      graphic:{
-        type:"text",
-          // left:"30%",
-          left:'31%',
-          top:'center',
-          // top:"45%",
-          style:{
-          text:`填报总数
+        itemGap:20,
 
-12365例`,
-            fill:"#fff",
-            fontSize:16
-        }
       },
       color:['#1792E6','#94D4FF','#2B71FF'],
         series: [
@@ -58,11 +50,11 @@ export default memo(function (props){
             show: true
           },
           data: [
-            {value: 1136, name: '填报中'},
-            {value: 1113, name: '填报完成'},
-            {value: 1136, name: '已审核'},
-            {value: 736, name: '已归档'},
-            {value: 536, name: '诊断中'}
+            {value: 0, name: '填报中'},
+            {value: 0, name: '填报完成'},
+            {value: 0, name: '已审核'},
+            {value: 0, name: '已归档'},
+            {value: 0, name: '诊断中'}
           ],
           label: {
             normal: {
@@ -85,17 +77,14 @@ export default memo(function (props){
       ]
     }
 
-
-      for(let i in all_count.count){
+    for(let i in all_count.count){
         option.series[0].data[i].value =all_count.count[i].count;
         option.series[0].data[i].name =all_count.count[i].name;
       }
 
-      option.graphic.style.text = ` 填报总数
+    chart.setOption(option);
 
-${all_count.all_count}例`;
-      chart.setOption(option);
-
+    JSON.stringify(all_count) !== '{}' &&  setIsLoading(false);
 
   },[all_count])
 
@@ -104,6 +93,7 @@ ${all_count.all_count}例`;
      <div className="title">标准版认证情况</div>
      <div className="hover" />
      <div id='blChart'  />
+     { isLoading && <Spin tip="Loading..." indicator={antIcon} />}
    </Wrapper>
   )
 })

@@ -22,29 +22,34 @@ export default memo(function (props){
   const [List,setList] = useState({});
   const listRef = useRef();
   const [Count,setCount] = useState(100);
-  const {rank_state,province,city} = useSelector(state => ({
+  const {rank_state,province,city,grade} = useSelector(state => ({
     rank_state:state.getIn(['dataReporting','rank_state']),
     province:state.getIn(['dataReporting','province']),
     city:state.getIn(['dataReporting','city']),
+    grade:state.getIn(['dataReporting','grade']),
   }))
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    province ? getRankByProvince(province).then(res => {
-      setList(res.data.data);
-    }) : getRank().then(res => {
-      setList(res.data.data);
-    })
-  },[province])
-  useEffect(() => {
-    city &&  getRankCity(city).then(res => {
+    switch (grade){
+      case 2:
+        getRankByProvince(province).then(res => {
       setList(res.data.data);
     })
-    city === '' && province && getRankByProvince(province).then(res => {
+        break;
+      case 3:
+        getRankCity(city).then(res => {
       setList(res.data.data);
     })
-  },[city])
+        break;
+      default:
+        getRank().then(res => {
+      setList(res.data.data);
+    })
+        break;
+    }
+  },[grade])
 
   const changeRankState = (state) => {
     listRef.current.scrollTop = 0;

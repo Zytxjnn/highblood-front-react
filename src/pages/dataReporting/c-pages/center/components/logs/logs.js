@@ -9,30 +9,45 @@ import {
 import {
   getLogsAction,
   getLogsByProvinceAction,
-  getLogsByCityAction
+  getLogsByCityAction,
 } from '@/pages/dataReporting/store/actionCreator'
 
 export default memo(function (){
 
 
-  const {logs,province,city} = useSelector(state => ({
+  const {logs,province,city,grade} = useSelector(state => ({
     logs:state.getIn(['dataReporting','logs']),
     province:state.getIn(['dataReporting','province']),
-    city:state.getIn(['dataReporting','city'])
+    city:state.getIn(['dataReporting','city']),
+    grade:state.getIn(['dataReporting','grade']),
   }),shallowEqual);
 
 
   const dispatch = useDispatch();
 
 
-  useEffect(() => {
+  // useEffect(() => {
+  //   (city === '' && province) && dispatch(getLogsByProvinceAction(province));
+  //   province || dispatch(getLogsAction());
+  // },[province]);
+  // useEffect(() => {
+  //   city &&  dispatch(getLogsByCityAction(city));
+  //   (city === '' && province) && dispatch(getLogsByProvinceAction(province))
+  // },[city]);
 
-    province ? dispatch(getLogsByProvinceAction(province)) : dispatch(getLogsAction());
-  },[province]);
   useEffect(() => {
-    city &&  dispatch(getLogsByCityAction(city));
-    (city === '' && province) && dispatch(getLogsByProvinceAction(province))
-  },[city])
+    switch (grade){
+      case 2:
+        dispatch(getLogsByProvinceAction(province))
+        break;
+      case 3:
+        dispatch(getLogsByCityAction(city))
+        break;
+      default:
+        dispatch(getLogsAction())
+        break;
+    }
+  },[grade])
 
   return (
    <Wrapper>

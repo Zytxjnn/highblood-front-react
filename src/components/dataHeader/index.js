@@ -13,9 +13,9 @@ import union from '@/assets/imgs/logos/union.png';
 
 export default memo(function DataHeader(){
   const {grade,province,city} = useSelector(state => ({
-    province:state.getIn(['dataOverview','province']),
-    city:state.getIn(['dataOverview','city']),
-    grade:state.getIn(['dataOverview','grade']),
+    province:state.getIn(['dataReporting','province']),
+    city:state.getIn(['dataReporting','city']),
+    grade:state.getIn(['dataReporting','grade']),
   }));
 
   return (

@@ -3,12 +3,14 @@ import {shallowEqual, useDispatch,useSelector} from "react-redux";
 import axios from "axios";
 
 import * as echarts from 'echarts';
-import china from 'echarts/map/json/china';
+
+
+import china from '@/assets/json/china.json';
 import icon1 from '@/assets/imgs/dataOverview/1.png';
 import icon2 from '@/assets/imgs/dataOverview/2.png';
 import icon3 from '@/assets/imgs/dataOverview/3.png';
 import {cityMap} from '@/common/data-local.js'
-// import bmap from 'echarts/extension/bmap/bmap';
+
 
 
 
@@ -46,14 +48,13 @@ echarts.registerMap('china', china);
 
   // other hooks
   const {all_count,province,city,grade} = useSelector(state => {
-
     return {
       all_count:state.getIn(['dataReporting','all_count']),
       province:state.getIn(['dataReporting','province']),
       city:state.getIn(['dataReporting','city']),
       grade:state.getIn(['dataReporting','grade']),
     }
-  });
+  },shallowEqual);
 
   // useEffect(() => {
   //   console.log(all_count);
@@ -61,8 +62,31 @@ echarts.registerMap('china', china);
 
   const dispatch = useDispatch();
   useEffect(() =>{
-    initalMap();
-  },[dispatch]);
+    switch (grade){
+      case 2:
+        var provinceIndex = provincesText.findIndex(x => {
+          return province === x
+        });
+        if (provinceIndex === -1) return;
+        var provinceAlphabet = provinces[provinceIndex];
+        setProvinceAlphabet(provinceAlphabet);
+
+        getProvinceMapOpt(provinceAlphabet,province);
+        break;
+      case 3:
+        var provinceIndex = provincesText.findIndex(x => {
+          return province === x
+        });
+        if (provinceIndex === -1) return;
+        var provinceAlphabet = provinces[provinceIndex];
+        setProvinceAlphabet(provinceAlphabet);
+        getCityMapOpt(city);
+        break;
+      default:
+        initalMap();
+      break;
+    }
+  },[]);
 
 
   // 业务逻辑
@@ -130,7 +154,6 @@ echarts.registerMap('china', china);
     axios.get('geo/province/' + provinceAlphabet + '.json').then(s => {
       echarts.registerMap(provinceAlphabet,s.data);
       const option = getMapOpt(provinceAlphabet);
-
       map.setOption(option,true);
 
       setProvinceAlphabet(provinceAlphabet);
@@ -149,17 +172,25 @@ echarts.registerMap('china', china);
     dispatch(getGradeAction(2)); // 改变层级
   }
 
-  useEffect(() => { // 监听 city 改变
-    city && dispatch(getCountByCityAction(city));
-    city === '' && province && dispatch(getCountByProvinceAction(province));
 
-  },[dispatch,city]);
-  useEffect(() => { // 监听 province 改变
-    province && dispatch(getCountByProvinceAction(province));
-  },[dispatch,province]);
+
+    useEffect(() => {
+      switch (grade){
+        case 2:
+          dispatch(getCountByProvinceAction(province))
+          break;
+        case 3:
+          dispatch(getCountByCityAction(city))
+          break;
+        default:
+          dispatch(getCountAction())
+          break;
+      }
+    },[grade])
 
 
   const getCityMapOpt = (cityName) => {
+    map = echarts.init(document.getElementById('map'));
     // 将城市名称转为邮政编码
     const code = cityMap[cityName];
     axios.get('geo/city/' + code + '.json').then(s => {
@@ -205,6 +236,7 @@ echarts.registerMap('china', china);
             {all_count  && <Chunk count={all_count.all_count} text='通过认证医联体' logo={icon1} />}
             {all_count  && <Chunk count={all_count.today_count} text='通过认证医院总数' logo={icon2} />}
             {all_count  && <Chunk count={all_count.today_org} text='注册医院总数' logo={icon3} />}
+
           </div>
           <div id="map">
           </div>

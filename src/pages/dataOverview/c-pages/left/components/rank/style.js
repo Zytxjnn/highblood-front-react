@@ -66,17 +66,29 @@ export const Wrapper = styled.div`
      -webkit-box-shadow: none;
      background:rgba(0,0,0,0.2);
    }
-   
+
    .item-area{
      font-size:1.1rem;
      color:#CDCDCD;
      height: 1.875rem;
      line-height: 1.875rem;
-
+     text-overflow: ellipsis;
+     overflow: hidden;
+     white-space: nowrap;
    }
-   
+
    .item-progress{
-     width: 90%;
+     width: 95%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     .ant-progress{
+       width: 90%;
+     }
+     .score{
+       color:#fff;
+
+     }
    }
    
    span{

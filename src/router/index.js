@@ -1,5 +1,6 @@
 import DataOverView from '../pages/dataOverview';
 import dataReporting from '../pages/dataReporting';
+import dataCharts from '../pages/dataCharts';
 
 const router = [
   {
@@ -11,6 +12,11 @@ const router = [
     path:'/dataReporting',
     exact:true,
     component:dataReporting
+  },
+  {
+    path:'/dataCharts',
+    exact:true,
+    component:dataCharts
   }
 ]
 
