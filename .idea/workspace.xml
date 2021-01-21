@@ -2,40 +2,97 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1aae494-153c-41fb-8ac4-a9b5af5417a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/json/china.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/network/dataCharts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dataCharts/c-coms/nextBtn/nextBtn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dataCharts/c-coms/nextBtn/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dataCharts/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dataCharts/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/medicalConsortium/controlScore.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/medicalConsortium/rank1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/medicalConsortium/rank2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/medicalConsortium/选中.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/qualityIndicators/icons/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/qualityIndicators/icons/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/qualityIndicators/icons/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/qualityIndicators/icons/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/qualityIndicators/icons/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/qualityIndicators/icons/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/qualityIndicators/icons/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/qualityIndicators/icons/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/qualityIndicators/icons/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/qualityIndicators/icons/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/qualityIndicators/icons/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/qualityIndicators/icons/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/sideBar/数据概览.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/sideBar/设置.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/sideBar/质控指标.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/sideBar/退出.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/date-picker/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/date-picker/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/date/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/date/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/hospitalList/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/hospitalList/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/search/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/search/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/slider/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/slider/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/indexHeader/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/indexHeader/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sideBar/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sideBar/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/network/controlIndex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/month6/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/month6/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/scoreInfo/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/scoreInfo/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/scoreList/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/scoreList/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/timeInfo/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/timeInfo/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/left/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/left/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/china/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/china/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/hospitalListByCore/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/hospitalListByCore/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/subList/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/subList/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/store/actionCreator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/store/constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/store/reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/controlIndex/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataReproting/深蓝框.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/dataReproting/绿框.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/reset.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/qualityIndicators/搜索医院.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/qualityIndicators/搜索框.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/qualityIndicators/筛选日期.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/qualityIndicators/返回首页.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/dataHeader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dataHeader/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/network/dataReporting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/dataReporting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/network/dataCharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/dataCharts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/network/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-coms/nextBtn/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-coms/nextBtn/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-coms/preBtn/preBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataCharts/c-coms/preBtn/preBtn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-coms/preBtn/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataCharts/c-coms/preBtn/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataCharts/c-coms/nextBtn/nextBtn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataCharts/c-coms/nextBtn/style.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataCharts/c-coms/preBtn/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataCharts/c-coms/preBtn/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataCharts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataCharts/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/rank/rank.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/rank/rank.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/rank/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/rank/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/normal/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/normal/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/components/normal/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/components/normal/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-coms/nextBtn/nextBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-coms/nextBtn/nextBtn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/chunk/chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/chunk/chunk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/chunk/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/chunk/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/logs/logs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/logs/logs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/state/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/state/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/store/actionCreator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/store/actionCreator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-coms/preBtn/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-coms/preBtn/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/logs/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/logs/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/rank/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/rank/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/state/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/state/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/right/components/rank/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/right/components/rank/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/right/components/rank/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/right/components/rank/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +122,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../js/Canvas" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/imgs" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -74,23 +131,23 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="settings.webpack" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\newCode\react\highblood-front\src\assets\imgs" />
+      <recent name="D:\newCode\react\highblood-front\src\assets\imgs\qualityIndicators" />
+      <recent name="D:\newCode\react\highblood-front\src\pages\controlIndex\c-pages" />
       <recent name="D:\newCode\react\highblood-front\src\pages\dataCharts" />
       <recent name="D:\newCode\react\highblood-front\public" />
-      <recent name="D:\newCode\react\highblood-front\public\geo" />
-      <recent name="D:\newCode\react\highblood-front\src\components\dataHeader" />
-      <recent name="D:\newCode\react\highblood-front\src\pages\dataReporting" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\newCode\react\highblood-front\src\pages\controlIndex\c-pages\hospitalJoined\c-coms" />
+      <recent name="D:\newCode\react\highblood-front\src\components\indexHeader\c-coms" />
       <recent name="D:\newCode\react\highblood-front\src\assets\json" />
       <recent name="D:\newCode\react\highblood-front\src\pages\dataReporting\c-pages\center\components\logs" />
       <recent name="D:\newCode\react\highblood-front\src\pages\dataOverview\c-pages\left" />
-      <recent name="D:\newCode\react\highblood-front\src\pages\dataOverview\c-pages\center\components\chunk" />
-      <recent name="D:\newCode\react\highblood-front\src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -118,6 +175,14 @@
       <workItem from="1610678123710" duration="19156000" />
       <workItem from="1610762439717" duration="24271000" />
       <workItem from="1610851715442" duration="18290000" />
+      <workItem from="1610877976609" duration="633000" />
+      <workItem from="1610932304128" duration="71000" />
+      <workItem from="1610932816998" duration="12906000" />
+      <workItem from="1610948680494" duration="15202000" />
+      <workItem from="1611021821240" duration="30247000" />
+      <workItem from="1611107891445" duration="1508000" />
+      <workItem from="1611119194461" duration="21096000" />
+      <workItem from="1611190701701" duration="1198000" />
     </task>
     <servers />
   </component>

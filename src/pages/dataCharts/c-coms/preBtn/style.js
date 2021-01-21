@@ -6,7 +6,7 @@ export const  Wrapper  = styled.div`
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  left: 1rem;
+  left: 2rem;
   height: 7vh;
   width: 7vh;
   border-radius: 50%;

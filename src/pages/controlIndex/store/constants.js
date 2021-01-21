@@ -1,0 +1,13 @@
+export const CHANGE_PROVINCE = 'controlIndex/CHANGE_PROVINCE';
+export const CHANGE_CITY = 'controlIndex/CHANGE_CITY';
+export const CHANGE_GRADE = 'controlIndex/CHANGE_GRADE';
+export const CHANGE_CORE_DETAIL = 'controlIndex/CHANGE_CORE_DETAIL';
+export const CHANGE_START_TIME = 'controlIndex/CHANGE_START_TIME';
+export const CHANGE_END_TIME = 'controlIndex/CHANGE_END_TIME';
+export const CHANGE_SHOW_CORE = 'controlIndex/CHANGE_SHOW_CORE';
+export const CHANGE_CORE_NAME = 'controlIndex/CHANGE_CORE_NAME';
+export const CHANGE_HOSPITAL_JOINED_ID = 'controlIndex/CHANGE_HOSPITAL_JOINED_ID';
+export const CHANGE_HOSPITAL_JOINED_NAME = 'controlIndex/CHANGE_HOSPITAL_JOINED_NAME';
+export const CHANGE_HOSPITAL_ID = 'controlIndex/CHANGE_HOSPITAL_ID';
+export const CHANGE_HOSPITAL_NAME = 'controlIndex/CHANGE_HOSPITAL_NAME';
+export const CHANGE_COMP_GRADE = 'controlIndex/CHANGE_COMP_GRADE';

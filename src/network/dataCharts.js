@@ -1,12 +1,14 @@
 import {dataCharts as axios} from '@/network/request';
 import Qs from 'qs';
 
+
 // 数据概览第三页图表
 export const getCoreDetailForDataView = () => {
+
   return axios.post(
     '/getCoreDetailForDataView',
     Qs.stringify({
-      area_type:1
+      area_type:1,
     })
   )
 }

@@ -7,8 +7,9 @@ import DataHeader from '@/components/dataHeader';
 import DataViewCenter from './c-pages/center';
 import DataViewLeft from './c-pages/left';
 import DataViewRight from './c-pages/right';
-import PreBtn from './c-coms/preBtn/preBtn'
-import NextBtn from './c-coms/nextBtn/nextBtn'
+import PreBtn from './c-coms/preBtn/preBtn';
+import NextBtn from './c-coms/nextBtn/nextBtn';
+import SideBar from '@/components/sideBar';
 
 import {
   Wrapper
@@ -35,6 +36,7 @@ export default memo(function DataOverview(props){
       </Row>
       <PreBtn/>
       <NextBtn/>
+      <SideBar/>
     </Wrapper>
   )
 })

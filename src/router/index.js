@@ -2,6 +2,8 @@ import DataOverView from '../pages/dataOverview';
 import dataReporting from '../pages/dataReporting';
 import dataCharts from '../pages/dataCharts';
 
+import controlIndex from '@/pages/controlIndex'
+
 const router = [
   {
     path:'/',
@@ -17,6 +19,11 @@ const router = [
     path:'/dataCharts',
     exact:true,
     component:dataCharts
+  },
+  {
+    path:'/controlIndex',
+    exact:true,
+    component:controlIndex
   }
 ]
 

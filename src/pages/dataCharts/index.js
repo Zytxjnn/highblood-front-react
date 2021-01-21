@@ -11,7 +11,8 @@ import {
   getCoreDetailForDataViewByProvince,
   getCoreDetailForDataViewByCity
 } from '@/network/dataCharts'
-import PreBtn from './c-coms/preBtn/preBtn'
+import PreBtn from './c-coms/preBtn/preBtn';
+import SideBar from '@/components/sideBar';
 
 
 export default memo(function DataCharts(props){
@@ -273,9 +274,7 @@ export default memo(function DataCharts(props){
         {
           JSON.stringify(Options) === '[]' && <div className="nodata">暂无数据</div>
         }
-
-
-
+        <SideBar/>
         <PreBtn/>
       </Wrapper>
     )

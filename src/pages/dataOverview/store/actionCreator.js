@@ -10,7 +10,6 @@ const changeContentAction = (res) => ({
   type:actionTypes.CHANGE_CONTENT,
   content:res.content
 });
-
 export const getContentAction = () => {
   return dispatch => {
     getData().then(res => {
@@ -18,7 +17,6 @@ export const getContentAction = () => {
     })
   }
 }
-
 export const getContentByProvinceAction = (province) => {
   return dispatch => {
     getDataByProvince(province).then(res => {
@@ -26,7 +24,6 @@ export const getContentByProvinceAction = (province) => {
     })
   }
 }
-
 export const getContentByCityAction = (province,city) => {
   return dispatch => {
     getDataByCity(province,city).then(res => {

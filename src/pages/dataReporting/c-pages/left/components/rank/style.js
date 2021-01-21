@@ -34,7 +34,7 @@ export const Wrapper = styled.div`
 
   .hover{
     position: absolute;
-    top: 0;
+    top: 3px;
     left: 3px;
     width: 99%;
     height: 4vh;

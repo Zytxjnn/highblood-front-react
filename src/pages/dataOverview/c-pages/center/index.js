@@ -199,7 +199,6 @@ echarts.registerMap('china', china);
         break;
       case 3:
         getProvinceMapOpt(ProvinceAlphabet,province);
-
         dispatch(getGradeAction(2));
         dispatch(getCityAction(''));
         break;

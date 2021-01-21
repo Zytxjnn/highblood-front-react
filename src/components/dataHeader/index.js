@@ -9,8 +9,6 @@ import cardioval from '@/assets/imgs/logos/cardioval.png';
 import union from '@/assets/imgs/logos/union.png';
 
 
-
-
 export default memo(function DataHeader(){
   const {grade,province,city} = useSelector(state => ({
     province:state.getIn(['dataReporting','province']),

@@ -6,8 +6,11 @@ const dataOverview = Axios.create({  // 数据概览第一页
 const dataReporting = Axios.create({  // 数据概览第二页
   baseURL:'http://newhyper.chinahc.org.cn/api/v1/qc'
 })
-const dataCharts = Axios.create({  // 数据概览第二页质控分数排名和数据概览第三页
-  baseURL:'http://hbqc.ccpmc.org/QualityControlIndex/'
+const dataCharts = Axios.create({  // 数据概览第三页
+  baseURL:'http://hbqc.ccpmc.org/QualityControlIndex'
+})
+const controlIndex = Axios.create({  // 数据概览第三页
+  baseURL:'http://hbqc.ccpmc.org'
 })
 
 
@@ -15,5 +18,6 @@ const dataCharts = Axios.create({  // 数据概览第二页质控分数排名和
 export {
   dataOverview,
   dataReporting,
-  dataCharts
+  dataCharts,
+  controlIndex
 }
