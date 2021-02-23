@@ -21,21 +21,9 @@ export default memo(function (){
     city:state.getIn(['dataReporting','city']),
     grade:state.getIn(['dataReporting','grade']),
   }),shallowEqual);
-
-
   const dispatch = useDispatch();
 
-
-  // useEffect(() => {
-  //   (city === '' && province) && dispatch(getLogsByProvinceAction(province));
-  //   province || dispatch(getLogsAction());
-  // },[province]);
-  // useEffect(() => {
-  //   city &&  dispatch(getLogsByCityAction(city));
-  //   (city === '' && province) && dispatch(getLogsByProvinceAction(province))
-  // },[city]);
-
-  useEffect(() => {
+  useEffect(() => { // 层级发生改变请求数据
     switch (grade){
       case 2:
         dispatch(getLogsByProvinceAction(province))

@@ -22,6 +22,7 @@ import {
   getProvinceAction,
   getCityAction,
   getGradeAction,
+
 } from '@/pages/dataReporting/store/actionCreator';
 
 import {
@@ -172,8 +173,6 @@ echarts.registerMap('china', china);
     dispatch(getGradeAction(2)); // 改变层级
   }
 
-
-
     useEffect(() => {
       switch (grade){
         case 2:
@@ -183,7 +182,7 @@ echarts.registerMap('china', china);
           dispatch(getCountByCityAction(city))
           break;
         default:
-          dispatch(getCountAction())
+          dispatch(getCountAction());
           break;
       }
     },[grade])
@@ -233,10 +232,9 @@ echarts.registerMap('china', china);
      <Wrapper>
         <TopWrapper>
           <div className='chunks'>
-            {all_count  && <Chunk count={all_count.all_count} text='通过认证医联体' logo={icon1} />}
-            {all_count  && <Chunk count={all_count.today_count} text='通过认证医院总数' logo={icon2} />}
-            {all_count  && <Chunk count={all_count.today_org} text='注册医院总数' logo={icon3} />}
-
+            {all_count  && <Chunk count={all_count.all_count} text='累计填报病例总数' logo={icon1} />}
+            {all_count  && <Chunk count={all_count.today_count} text='今日填报医院数量' logo={icon2} flag={true} />}
+            {all_count  && <Chunk count={all_count.today_org} text='今日填报病例总数' logo={icon3} />}
           </div>
           <div id="map">
           </div>

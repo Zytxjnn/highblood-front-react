@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
 `
 
 export const Chunk = styled.div`
-
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
@@ -17,9 +16,7 @@ export const Chunk = styled.div`
     border-radius:3rem;
     margin-top: 3rem;
     background: linear-gradient(270deg, rgba(74, 182, 214, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
-
-
-
+    
   &:nth-child(1) .value{
     color:#008599;
   }

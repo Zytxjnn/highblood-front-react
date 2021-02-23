@@ -12,27 +12,33 @@ const changeContentAction = (res) => ({
 });
 export const getContentAction = () => {
   return dispatch => {
+    dispatch(changeContentState(true));
     getData().then(res => {
+      dispatch(changeContentState(false));
       dispatch(changeContentAction(res.data));
     })
   }
 }
 export const getContentByProvinceAction = (province) => {
   return dispatch => {
+    dispatch(changeContentState(true));
     getDataByProvince(province).then(res => {
+      dispatch(changeContentState(false));
       dispatch(changeContentAction(res.data));
     })
   }
 }
 export const getContentByCityAction = (province,city) => {
   return dispatch => {
+    dispatch(changeContentState(true));
     getDataByCity(province,city).then(res => {
+      dispatch(changeContentState(false));
       dispatch(changeContentAction(res.data));
     })
   }
 }
 
-export const changeProvinceAction = (province) => ({
+const changeProvinceAction = (province) => ({
   type:actionTypes.CHANGE_PROVINCE,
   province,
 })
@@ -43,7 +49,7 @@ export const getProvinceAction = (province) => {
   }
 }
 
-export const changCityAction = (city) => ({
+const changCityAction = (city) => ({
   type:actionTypes.CHANGE_CITY,
   city,
 })
@@ -54,7 +60,7 @@ export const getCityAction = (city) => {
   }
 }
 
-export const changGradeAction = (grade) => ({
+const changGradeAction = (grade) => ({
   type:actionTypes.CHANGE_GRADE,
   grade,
 })
@@ -64,3 +70,10 @@ export const getGradeAction = (grade) => {
     dispatch(changGradeAction(grade));
   }
 }
+
+const changeContentState = content_state => ({
+  type:actionTypes.CHANGE_CONTENT_STATE,
+  content_state
+})
+
+

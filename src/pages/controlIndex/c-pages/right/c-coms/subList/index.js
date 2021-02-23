@@ -58,21 +58,12 @@ export default memo(function (){
     switch (grade){
       case 2: // 省
         dispatch(getCoreDetailByProvinceAction(start,end,province));
-        // getCoreRank(start,end,province).then(res => { // 排名信息
-        //   setRank(res.data.data);
-        // })
         break;
       case 3: // 市
         dispatch(getCoreDetailByCityAction(start,end,city));
-        // getCoreRankCityAndChina(start,end,city).then(res => { // 比较数据
-        //   setRank(res.data.data);
-        // })
         break;
       case 4: // 医联体
         dispatch(getCoreDetailByJoinedAction(start,end,hospital_joined_id));
-        // getCoreRankHospitalJoinedAndChina(start,end,hospital_joined_id).then(res => { // 排名信息
-        //   setRank(res.data.data);
-        // });
         break;
       case 5: // 医院
         break;
@@ -81,7 +72,9 @@ export default memo(function (){
     }
   },[grade,start]);
 
-  useEffect(() => {
+  /* comp_grade 对比的层级 1全国 2省 3市
+   grade 自身的层级*/
+  useEffect(() => { // 层级或对比层级发生改变时，请求排名数据和对比层级数据
     switch (comp_grade){
       case 1:
         switch (grade){
@@ -158,6 +151,7 @@ export default memo(function (){
   },[comp_grade,grade]);
 
   const onClick = (core_name) => {
+    if(grade >= 4) return;
     dispatch(getCoreNameAction(core_name));
     dispatch(getShowCoreAction(false));
   }

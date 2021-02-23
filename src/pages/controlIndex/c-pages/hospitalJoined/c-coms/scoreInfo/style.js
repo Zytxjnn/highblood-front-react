@@ -10,7 +10,7 @@ export const Chunk = styled.div`
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  padding: 1rem 1vw .3rem 1.5vw;
+  padding: 1rem 1vw .7rem 1.5vw;
   width: 11vw;
   height: 7rem;
   background-size: 100% 100%;

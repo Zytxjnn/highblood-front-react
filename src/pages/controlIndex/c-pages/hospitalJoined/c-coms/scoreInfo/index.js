@@ -44,19 +44,19 @@ export default memo(function (){
     <Wrapper>
       <Chunk bg={controlScore}>
         <div className="item-name">质控评分</div>
-        <div className="item-value">{scoreInfo && scoreInfo.score}</div>
+        <div className="item-value">{scoreInfo.score ?? '无数据'}</div>
       </Chunk>
       <Chunk bg={rank1}>
         <div className="item-name">省排名</div>
-        <div className="item-value">{scoreInfo && scoreInfo.city_rank}</div>
+        <div className="item-value">{scoreInfo.province_rank ?? '暂无数据'}</div>
       </Chunk>
       <Chunk bg={rank1}>
         <div className="item-name">市排名</div>
-        <div className="item-value">{scoreInfo && scoreInfo.score}</div>
+        <div className="item-value">{scoreInfo.city_rank ?? '暂无数据'}</div>
       </Chunk>
       <Chunk bg={rank2}>
         <div className="item-name">全国排名</div>
-        <div className="item-value">{scoreInfo && scoreInfo.country_rank}</div>
+        <div className="item-value">{scoreInfo.country_rank ?? '暂无数据'}</div>
       </Chunk>
     </Wrapper>
   )

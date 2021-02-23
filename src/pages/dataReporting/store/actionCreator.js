@@ -20,24 +20,30 @@ const changeCountAction = (all_count) => ({
 
 export const getCountAction = () => {
   return dispatch => {
+    dispatch(getCountStateAction(true));
     getCount().then(res => {
       dispatch(changeCountAction(res.data.data));
+      dispatch(getCountStateAction(false));
     })
   }
 }
 
 export const getCountByProvinceAction = (province) => {
   return dispatch => {
+    dispatch(getCountStateAction(true));
     getCountByProvince(province).then(res => {
       dispatch(changeCountAction(res.data.data));
+      dispatch(getCountStateAction(false));
     })
   }
 }
 
 export const getCountByCityAction = (city) => {
   return dispatch => {
+    dispatch(getCountStateAction(true));
     getCountByCity(city).then(res => {
       dispatch(changeCountAction(res.data.data));
+      dispatch(getCountStateAction(false));
     })
   }
 }
@@ -129,7 +135,7 @@ export const getScoreListByCityAction = (area_type,data_type,city) => {
   }
 }
 
-export const changSubGradeAction = (sub_grade) => ({
+const changSubGradeAction = (sub_grade) => ({
   type:actionTypes.CHANGE_SUB_GRADE,
   sub_grade,
 })
@@ -139,7 +145,7 @@ export const getSubGradeAction = (sub_grade) => {
   }
 }
 
-export const changRankStateAction = (rank_state) => ({
+const changRankStateAction = (rank_state) => ({
   type:actionTypes.CHANGE_RANK_STATE,
   rank_state,
 })
@@ -149,6 +155,18 @@ export const getRankStatAction = (rank_state) => {
     dispatch(changRankStateAction(rank_state))
   }
 }
+
+// 填报总数是否在加载
+const getCountState = count_state => ({
+  type:actionTypes.CHANGE_COUNT_STATE,
+  count_state
+});
+export const getCountStateAction = count_state => {
+  return dispatch => {
+    dispatch(getCountState(count_state))
+  }
+}
+
 
 
 

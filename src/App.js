@@ -1,7 +1,8 @@
-import React,{memo} from "react";
+import React,{memo,Suspense} from "react";
 import { renderRoutes } from 'react-router-config';
 import {BrowserRouter} from "react-router-dom";
 import { Provider } from 'react-redux';
+import Loading from '@/components/loading'
 
 import store from "./store";
 import routers from "./router";
@@ -10,7 +11,9 @@ export default memo(function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        {renderRoutes(routers)}
+        <Suspense fallback={<Loading/>}>
+          {renderRoutes(routers)}
+        </Suspense>
       </BrowserRouter>
     </Provider>
   );

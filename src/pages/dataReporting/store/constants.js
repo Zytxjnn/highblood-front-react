@@ -7,3 +7,4 @@ export const CHANGE_LOGS = 'dataReporting/CHANGE_LOGS';
 export const CHANGE_SCORE_LIST = 'dataReporting/CHANGE_SCORE_LIST';
 export const CHANGE_SUB_GRADE = 'dataReporting/CHANGE_SUB_GRADE';
 export const CHANGE_RANK_STATE = 'dataReporting/CHANGE_RANK_STATE';
+export const CHANGE_COUNT_STATE = 'dataReporting/CHANGE_COUNT_STATE';

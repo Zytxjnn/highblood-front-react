@@ -19,6 +19,9 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     height: 3vh;
     z-index: 2;
     font-size: 2.2vh;
@@ -37,8 +40,20 @@ export const Wrapper = styled.div`
     background-image: url(${titleBg});
     background-size: 100% 100%;
   }
-  
-  
+
+  .ant-spin{
+    z-index: 10;
+    position:absolute;
+    width:100%;
+    height:100%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+  }
 `
 
 export const InfoList = styled.div`
@@ -60,11 +75,18 @@ export const InfoList = styled.div`
         }
       }
       .count{
-        text-align:right;
-        span{
+        
+        // 数字居中 单位居右
+        //display: flex;
+        //align-items: center;
+        //justify-content: center;
+        span:nth-child(1){
+          flex: 1;
+          text-align: center;
           font-size: 3rem;
           font-weight: 800;
         }
+
       }
     }
   }

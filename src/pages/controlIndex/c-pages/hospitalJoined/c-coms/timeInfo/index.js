@@ -25,11 +25,13 @@ export default memo(function (){
       case 4:
         getTimeInfoByHospitalJoined(hospital_joined_name).then(res => {
           setTimeInfo(res.data.content);
+          console.log(res.data.content)
         })
         break;
       case 5:
         getTimeInfoByHospitalJoined(hospital_name).then(res => {
           setTimeInfo(res.data.content);
+          console.log(res.data.content)
         })
         break;
       default:break;
@@ -46,7 +48,7 @@ export default memo(function (){
         <div className="item-info">
           <div className="item-title">注册时间</div>
           <div className="item-value">
-            <span className="value">{timeInfo && timeInfo.register_time}</span>
+            <span className="value">{timeInfo.register_time === '' ? '暂无数据' : timeInfo.register_time}</span>
           </div>
         </div>
       </Chunk>
@@ -57,7 +59,7 @@ export default memo(function (){
         <div className="item-info">
           <div className="item-title">通过认证时间</div>
           <div className="item-value">
-            <span className="value">{timeInfo && timeInfo.pass_time}</span>
+            <span className="value">{timeInfo.pass_time === '' ? '暂无数据' : timeInfo.pass_time}</span>
           </div>
         </div>
       </Chunk>
@@ -68,7 +70,7 @@ export default memo(function (){
         <div className="item-info">
           <div className="item-title">再认证倒计时</div>
           <div className="item-value">
-            <span className="value">{timeInfo && timeInfo.again_time}</span>
+            <span className="value">{timeInfo.again_time === '' ? '暂无数据' : timeInfo.again_time}</span>
           </div>
         </div>
       </Chunk>

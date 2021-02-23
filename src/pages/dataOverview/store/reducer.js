@@ -7,6 +7,7 @@ const defaultState = Map({
   grade:1,  // 当前在哪个层级 1全国 2省 3市
   province:'',
   city:'',
+  content_state:true,
 })
 
 function reducer(state = defaultState,action){
@@ -19,6 +20,8 @@ function reducer(state = defaultState,action){
       return state.set('city',action.city);
     case actionTypes.CHANGE_GRADE:
       return state.set('grade',action.grade);
+    case actionTypes.CHANGE_CONTENT_STATE:
+      return state.set('content_state',action.content_state);
     default:
       return state;
   }

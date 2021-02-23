@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import chunk from '@/assets/imgs/qualityIndicators/chunk.png';
 export const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -10,12 +10,12 @@ export const Wrapper = styled.div`
     justify-content: space-between;
     align-items:center;
     box-sizing: border-box;
-    margin: 0 2vw 1.88vw 0;
+    margin: 0 0 1.88vw 0;
     width:45%;
     height:7.5rem;
     padding:1rem 1.25rem;
-    background: #FFFFFF;
-    box-shadow: 0.1rem 0.1rem 1rem 0.2rem rgba(111, 111, 111, 0.2);
+    background-image: url(${chunk});
+    background-size: 100% 100%;
     border-radius: 1rem;
     cursor: pointer;
 

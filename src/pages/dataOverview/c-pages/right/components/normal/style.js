@@ -37,8 +37,20 @@ export const Wrapper = styled.div`
     background-image: url(${titleBg});
     background-size: 100% 100%;
   }
-  
-  
+
+  .ant-spin{
+    z-index: 10;
+    position:absolute;
+    width:100%;
+    height:100%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+  }
 `
 
 export const InfoList = styled.div`
@@ -61,7 +73,7 @@ export const InfoList = styled.div`
         }
       }
       .count{
-        text-align:right;
+        //text-align:right;
         span{
           font-size: 3rem;
           font-weight: 800;

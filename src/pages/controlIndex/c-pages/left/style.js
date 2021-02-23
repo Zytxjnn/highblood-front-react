@@ -35,7 +35,7 @@ export const TopWrapper = styled.div`
   .back{
     position: absolute;
     top: 10%;
-    right: 10%;
+    right: 13%;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -47,6 +47,10 @@ export const TopWrapper = styled.div`
     color: #fff;
     cursor: pointer;
     user-select: none;
+  }
+  .back:nth-child(2){
+    right: 0;
+    top: 10%;
   }
 `
 

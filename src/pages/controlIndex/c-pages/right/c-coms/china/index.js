@@ -38,9 +38,9 @@ export default memo(function (){
               {
                 core_detail[key].all_count !== 0 && <div className="count">
                   全国
-                  {core_detail[key].unit === 3 && <span><span className="highlight">{core_detail[key].all_count}</span> 例</span>}
-                  {core_detail[key].unit === 2 && <span><span className="highlight">{core_detail[key].pass_percent}</span> %</span>}
-                  {core_detail[key].unit === 1 && <span><span className="highlight">{core_detail[key].avg_time}</span> 分钟</span>}
+                  {core_detail[key].unit === 3 && <span><span className="highlight">&nbsp;{core_detail[key].all_count}</span> 例</span>}
+                  {core_detail[key].unit === 2 && <span><span className="highlight">&nbsp;{core_detail[key].pass_percent}</span> %</span>}
+                  {core_detail[key].unit === 1 && <span><span className="highlight">&nbsp;{core_detail[key].avg_time}</span> 分钟</span>}
                 </div>
               }
               {core_detail[key].all_count ===0  && <div>无数据</div>}

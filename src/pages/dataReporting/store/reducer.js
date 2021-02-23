@@ -7,6 +7,7 @@ const defaultState = Map({
   province:'',
   city:'',
   all_count:{},
+  count_state:true,
   logs:[],
   score_list:[],
   sub_grade:1,
@@ -33,6 +34,8 @@ function reducer(state = defaultState,action){
       return state.set('sub_grade',action.sub_grade);
     case actionTypes.CHANGE_RANK_STATE:
       return state.set('rank_state',action.rank_state);
+    case actionTypes.CHANGE_COUNT_STATE:
+      return state.set('count_state',action.count_state);
     default:
       return state;
   }

@@ -15,9 +15,6 @@ export const Wrapper = styled.div`
     grid-template-rows: repeat(3,15rem);
     grid-row-gap: 1.88rem;
     grid-column-gap: 2.5rem;
-    /*display: flex;*/
-    /*justify-content: space-between;*/
-    /*flex-wrap:wrap;*/
   }
 
   #charts .charts-item{
@@ -30,7 +27,6 @@ export const Wrapper = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
-    
     transform: translate(-50%,-50%);
     display: flex;
     justify-content: center;

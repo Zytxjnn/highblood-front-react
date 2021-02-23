@@ -142,6 +142,7 @@ echarts.registerMap('china', china);
   }
 
   const getProvinceMapOpt = (provinceAlphabet,provinceName) =>{
+
     map = echarts.init(document.getElementById('map'));
     axios.get('geo/province/' + provinceAlphabet + '.json').then(s => {
       echarts.registerMap(provinceAlphabet,s.data);
@@ -149,9 +150,8 @@ echarts.registerMap('china', china);
 
       map.setOption(option,true);
       getProvinceDataAndSet(provinceName);  // dispatch action 修改 redux 中数据
-
+      setProvinceAlphabet(provinceAlphabet);
       map.off('click');
-
       map.on('click',param => { // 给下级添加点击事件
         getCityMapOpt(param.name);
       })
@@ -170,6 +170,7 @@ echarts.registerMap('china', china);
 
 
   const getCityMapOpt = (cityName) => {
+    console.log(cityName)
     map = echarts.init(document.getElementById('map'));
     // 将城市名称转为邮政编码
     const code = cityMap[cityName];
@@ -196,8 +197,10 @@ echarts.registerMap('china', china);
         dispatch(getContentAction());
         dispatch(getGradeAction(1));
         dispatch(getProvinceAction(''));
+        setProvinceAlphabet('');
         break;
       case 3:
+
         getProvinceMapOpt(ProvinceAlphabet,province);
         dispatch(getGradeAction(2));
         dispatch(getCityAction(''));

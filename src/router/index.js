@@ -1,8 +1,12 @@
-import DataOverView from '../pages/dataOverview';
-import dataReporting from '../pages/dataReporting';
-import dataCharts from '../pages/dataCharts';
+import React from 'react';
 
-import controlIndex from '@/pages/controlIndex'
+const DataOverView = React.lazy(() => import('../pages/dataOverview'));
+const dataReporting = React.lazy(() => import('../pages/dataReporting'));
+const dataCharts = React.lazy(() => import('../pages/dataCharts'));
+const controlIndex = React.lazy(() => import('@/pages/controlIndex'));
+const QualityControlReport = React.lazy(() => import('@/pages/QualityControlReport'));
+
+
 
 const router = [
   {
@@ -24,6 +28,11 @@ const router = [
     path:'/controlIndex',
     exact:true,
     component:controlIndex
+  },
+  {
+    path:'/report',
+    exact:true,
+    component:QualityControlReport
   }
 ]
 

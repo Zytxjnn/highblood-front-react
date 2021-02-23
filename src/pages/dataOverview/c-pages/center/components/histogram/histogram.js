@@ -158,10 +158,11 @@ export default memo(function (){
   },[content])
 
   return (
-   <Wrapper>
-     <div id='histogram' style={{'width':'100%','height':'20vh'}}>
-
-     </div>
+   <Wrapper isShow={JSON.stringify(content.zhu_info) !== '[]'}>
+     {JSON.stringify(content.zhu_info) !== '[]'}
+        <div id='histogram' style={{'width':'100%','height':'20vh'}}>
+        </div>
+     {JSON.stringify(content.zhu_info) === '[]' && <div className="nodata">暂无数据</div>}
    </Wrapper>
   )
 })

@@ -18,6 +18,7 @@ export default memo(function () {
     }
   },shallowEqual);
 
+
   return (
     <Wrapper>
       <IndexHeader/>

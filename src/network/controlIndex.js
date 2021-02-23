@@ -203,7 +203,7 @@ export const getSearchHospital = (area_type,hospital_joined_name) => {
   return controlIndex.post(
     '/Hospital/getHospitalJoinedList',
     Qs.stringify({
-      area_type,
+      area_type:1,
       hospital_joined_name
     })
   )

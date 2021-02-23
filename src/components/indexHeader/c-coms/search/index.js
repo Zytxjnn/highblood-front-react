@@ -1,5 +1,5 @@
 import React,{memo,useEffect,useState} from 'react'
-import {shallowEqual, useSelector} from "react-redux";
+import {shallowEqual, useDispatch, useSelector} from "react-redux";
 
 import {
   Wrapper
@@ -12,12 +12,17 @@ import {
   getHospitalJoinedListByCity
 } from '@/network/controlIndex';
 import {
-  getSearchHospital
-} from '@/network/controlIndex'
+  getProvinceAction,
+  getCityAction,
+  getGradeAction,
+  getHospitalJoinedIdAction,
+  getHospitalJoinedNameAction,
+} from "@/pages/controlIndex/store/actionCreator";
 
 export default memo(function (){
   const [isShow,setIsShow] = useState('none');
-  const [hospitalList,setHospitalList] = useState([]);
+  const [hospitalList,setHospitalList] = useState([]);  // 医院列表
+  const [res,setRes] = useState([]);  // 筛选后结果
 
   const {province,city,grade} = useSelector(state => ({
     province:state.getIn(['controlIndex','province']),
@@ -25,41 +30,54 @@ export default memo(function (){
     grade:state.getIn(['controlIndex','grade']),
   }),shallowEqual);
 
+  const dispatch = useDispatch();
   useEffect(() => {
     switch (grade){
       default:
         getHospitalJoinedList().then(res => {
           setHospitalList(res.data.data);
+          setRes(res.data.data);
         })
         break;
       case 2:
         getHospitalJoinedListByProvince(province).then(res => {
           setHospitalList(res.data.data);
+          setRes(res.data.data);
         })
         break;
       case 3:
         getHospitalJoinedListByCity(city).then(res => {
           setHospitalList(res.data.data);
+          setRes(res.data.data);
         })
         break;
     }
   },[grade]);
 
-
-
-  const onChange = e => {
+  const onChange = e => { // 深入关键字，筛选医联体
     const value = e.target.value;
-    getSearchHospital(grade,value).then(res => {
-      setHospitalList(res.data.data);
+    const arr = hospitalList.filter(item => {
+      return item.hospital_name.indexOf(value) !== -1;
     })
+    setRes(arr);
   };
+  useEffect(() => {
+    document.addEventListener('click',() => {
+      setIsShow('none')
+    });
 
-  const onFocus = (e) => {
+  },[])
+  const onFocus = e => {
     setIsShow( 'block');
     e.stopPropagation();
   }
-  const onblur = (e) => {
-    setIsShow( 'none');
+
+  const onClick = (e,hospital) => { // 进入医联体界面
+    dispatch(getGradeAction(4));
+    dispatch(getProvinceAction(hospital.province));
+    dispatch(getCityAction(hospital.city));
+    dispatch(getHospitalJoinedIdAction(hospital.hospital_id));
+    dispatch(getHospitalJoinedNameAction(hospital.hospital_name));
     e.stopPropagation();
   }
 
@@ -67,14 +85,12 @@ export default memo(function (){
   return (
     <Wrapper isShow={isShow}  >
       <input className='textinput' type="text" placeholder='请输入医院名称' onChange={e => onChange(e)}
-             onFocus={(e) => {onFocus(e)}}
-             onBlur={(e) => {onblur(e)}}
-/>
+             onClick={(e) => {onFocus(e)}}/>
       <img src={searchBtn} alt="点击搜索"/>
       <div className="hospitalList">
         {
-          hospitalList && hospitalList.map((item,index) => {
-            return <div className='hospital' key={index}>{item.hospital_name}</div>
+          res && res.map((item,index) => {
+            return <div className='hospital' key={index} onClick={(e) => onClick(e,item)} >{item.hospital_name}</div>
           })
         }
       </div>
