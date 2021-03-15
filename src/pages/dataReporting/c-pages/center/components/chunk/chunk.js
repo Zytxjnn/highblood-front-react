@@ -28,7 +28,7 @@ export default memo(function Chunk(props){
         <div className="info-text">{text}</div>
         <div className="info-count"><span>{count}</span>{flag ? '家' : '例'}</div>
       </div>
-      {count_state ? <Spin tip="Loading..." indicator={antIcon} /> : '' }
+
     </ChunkWrapper>
   )
 });

@@ -1,5 +1,5 @@
 import React,{memo,useEffect,useState} from "react";
-import {shallowEqual, useDispatch,useSelector} from "react-redux";
+import { useDispatch,useSelector} from "react-redux";
 import axios from "axios";
 
 import * as echarts from 'echarts';
@@ -43,14 +43,16 @@ echarts.registerMap('china', china);
 
 
   // other hooks
-  const {content,province,city,grade} = useSelector(state => {
+  const {content,province,city,grade,user} = useSelector(state => {
     return {
       content:state.getIn(['dataOverview','content']),
       province:state.getIn(['dataReporting','province']),
       city:state.getIn(['dataReporting','city']),
       grade:state.getIn(['dataReporting','grade']),
+      user:state.getIn(['user','user']),
     }
   });
+
 
   const dispatch = useDispatch();
     useEffect(() =>{
@@ -62,7 +64,6 @@ echarts.registerMap('china', china);
           if (provinceIndex === -1) return;
           var provinceAlphabet = provinces[provinceIndex];
           setProvinceAlphabet(provinceAlphabet);
-
           getProvinceMapOpt(provinceAlphabet,province);
           break;
         case 3:
@@ -71,14 +72,16 @@ echarts.registerMap('china', china);
           });
           if (provinceIndex === -1) return;
           var provinceAlphabet = provinces[provinceIndex];
+
           setProvinceAlphabet(provinceAlphabet);
           getCityMapOpt(city);
           break;
-        default:
+        case 1:
+          dispatch(getContentAction());
           initalMap();
           break;
       }
-    },[]);
+    },[grade]);
 
 
   // 业务逻辑
@@ -99,6 +102,7 @@ echarts.registerMap('china', china);
       const provinceAlphabet = provinces[provinceIndex]
 
       // 请求省级地图及对应数据
+
       getProvinceMapOpt(provinceAlphabet,param.name);
     })
   }
@@ -142,7 +146,6 @@ echarts.registerMap('china', china);
   }
 
   const getProvinceMapOpt = (provinceAlphabet,provinceName) =>{
-
     map = echarts.init(document.getElementById('map'));
     axios.get('geo/province/' + provinceAlphabet + '.json').then(s => {
       echarts.registerMap(provinceAlphabet,s.data);
@@ -164,13 +167,15 @@ echarts.registerMap('china', china);
     dispatch(getGradeAction(2)); // 改变层级
   }
 
-  useEffect(() => { // 监听 city 改变
-    city && dispatch(getContentByCityAction(province,city));
-  },[city]);
+    useEffect(() => { // 监听 city 改变
+      city && dispatch(getContentByCityAction(province,city));
+    },[city]);
+    // useEffect(() => { //
+    //   province && dispatch(getContentByProvinceAction(province));
+    // },[province]);
 
 
   const getCityMapOpt = (cityName) => {
-    console.log(cityName)
     map = echarts.init(document.getElementById('map'));
     // 将城市名称转为邮政编码
     const code = cityMap[cityName];
@@ -200,7 +205,6 @@ echarts.registerMap('china', china);
         setProvinceAlphabet('');
         break;
       case 3:
-
         getProvinceMapOpt(ProvinceAlphabet,province);
         dispatch(getGradeAction(2));
         dispatch(getCityAction(''));
@@ -221,7 +225,7 @@ echarts.registerMap('china', china);
           </div>
           <div id="map">
           </div>
-          {grade > 1 && <div className="back" onClick={() => {back()}}>返回</div> }
+          { ((grade === 2 && user.user_role === 1) || (grade === 3 && user.user_role <= 2))&& <div className="back" onClick={() => {back()}}>返回</div> }
         </TopWrapper>
         <BotWrapper>
           <Histogram/>

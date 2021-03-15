@@ -7,6 +7,7 @@ import {
 import Date from './c-coms/date';
 import Search from './c-coms/search';
 import Slider from './c-coms/slider';
+import Back from './c-coms/back'
 import HospitalList from './c-coms/hospitalList'
 
 import cardioval from '@/assets/imgs/logos/cardioval.png';
@@ -35,6 +36,7 @@ export default memo(function DataHeader(){
       </div>
      <div className="right">
        <div className="tools">
+         {grade >= 4 && <Back/> }
          {grade >= 3 && <Slider/> }
          <Date/>
          {grade <= 3 && <Search/>}

@@ -14,10 +14,12 @@ import { LoadingOutlined } from '@ant-design/icons';
 
 export default memo(function (props){
   const [isLoading,setIsLoading] = useState(true);
-  const {all_count} = useSelector(state => ({
-    all_count:state.getIn(['dataReporting','all_count'])
+  const {all_count,count_state} = useSelector(state => ({
+    all_count:state.getIn(['dataReporting','all_count']),
+    count_state:state.getIn(['dataReporting','count_state'])
   }));
   const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
+
 
   useEffect(() => {
 
@@ -93,7 +95,7 @@ export default memo(function (props){
      <div className="title">标准版认证情况</div>
      <div className="hover" />
      <div id='blChart'  />
-     { isLoading && <Spin tip="Loading..." indicator={antIcon} />}
+     { count_state && <Spin tip="Loading..." indicator={antIcon} />}
    </Wrapper>
   )
 })

@@ -1,4 +1,4 @@
-import {dataReporting as axios,dataCharts } from "./request";
+import {dataReporting as axios,controlIndex } from "./request";
 import Axios from "axios";
 import Qs from 'qs';
 
@@ -50,19 +50,19 @@ export const getLogsByCity = (city) => {
 
 // 质控分数排名
 export const getScoreList = (area_type,data_type) => {
-  return Axios.post(
-    'http://hbqc.ccpmc.org/QualityControlScore/getScoreList',
+  return controlIndex.post(
+    '/QualityControlScore/getScoreList',
     Qs.stringify({
       area_type,
       data_type
-    })
+    }),
   )
 }
 
 
 export const getScoreListByProvince = (area_type,data_type,province) => {
-  return Axios.post(
-    'http://hbqc.ccpmc.org/QualityControlScore/getScoreList',
+  return controlIndex.post(
+    '/QualityControlScore/getScoreList',
     Qs.stringify({
       area_type,
       data_type,
@@ -72,8 +72,8 @@ export const getScoreListByProvince = (area_type,data_type,province) => {
 }
 
 export const getScoreListByCity = (area_type,data_type,city) => {
-  return Axios.post(
-    'http://hbqc.ccpmc.org/QualityControlScore/getScoreList',
+  return controlIndex.post(
+    '/QualityControlScore/getScoreList',
     Qs.stringify({
       area_type,
       data_type,

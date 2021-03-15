@@ -11,7 +11,7 @@ import {
   getScoreListByProvince,
   getScoreListByCity
 } from "@/network/dataReporting";
-import {log} from "echarts/lib/util/log";
+
 
 const changeCountAction = (all_count) => ({
   type:actionTypes.CHANGE_COUNT,

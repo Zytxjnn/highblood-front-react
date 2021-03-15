@@ -2,7 +2,8 @@ import React,{memo} from 'react';
 
 import {
   HeaderWrapper
-} from './style'
+} from './style';
+import Moment from './c-coms/date'
 import {useSelector} from "react-redux";
 
 import cardioval from '@/assets/imgs/logos/cardioval.png';
@@ -21,6 +22,7 @@ export default memo(function DataHeader(){
       <img src={cardioval} alt="" className='logo'  />
       <img src={union} alt="" className='logo'  />
       <div>{grade === 1 ? '全国' : grade === 2 ? province : city }高血压达标中心质控管理平台</div>
+      <Moment/>
     </HeaderWrapper>
   )
 })

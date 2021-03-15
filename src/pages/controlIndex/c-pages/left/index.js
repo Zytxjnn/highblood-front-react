@@ -26,26 +26,51 @@ echarts.registerMap('china', china);
   export default memo(function DataViewCenter(){
   // props and state
   let map = null;
-    const [ProvinceAlphabet,setProvinceAlphabet] = useState('');
+  const [ProvinceAlphabet,setProvinceAlphabet] = useState('');
   const provinces = ['shanghai', 'hebei', 'shanxi', 'neimenggu', 'liaoning', 'jilin', 'heilongjiang', 'jiangsu', 'zhejiang', 'anhui', 'fujian', 'jiangxi', 'shandong', 'henan', 'hubei', 'hunan', 'guangdong', 'guangxi', 'hainan', 'sichuan', 'guizhou', 'yunnan', 'xizang', 'shanxi1', 'gansu', 'qinghai', 'ningxia', 'xinjiang', 'beijing', 'tianjin', 'chongqing', 'xianggang', 'aomen', 'taiwan']
   const provincesText = ['上海', '河北', '山西', '内蒙古', '辽宁', '吉林', '黑龙江', '江苏', '浙江', '安徽', '福建', '江西', '山东', '河南', '湖北', '湖南', '广东', '广西', '海南', '四川', '贵州', '云南', '西藏', '陕西', '甘肃', '青海', '宁夏', '新疆', '北京', '天津', '重庆', '香港', '澳门', '台湾'];
 
 
 
   // other hooks
-  const {province,city,grade,show_core} = useSelector(state => {
+  const {province,city,grade,show_core,user} = useSelector(state => {
     return {
       province:state.getIn(['controlIndex','province']),
       city:state.getIn(['controlIndex','city']),
       grade:state.getIn(['controlIndex','grade']),
       show_core:state.getIn(['controlIndex','show_core']),
+      user:state.getIn(['user','user']),
     }
   },shallowEqual);
 
   const dispatch = useDispatch();
     useEffect(() =>{
-      initalMap();
-    },[]);
+
+      switch (grade){
+        case 2:
+          var provinceIndex = provincesText.findIndex(x => {
+        return province === x
+      });
+      if (provinceIndex === -1) return;
+      var provinceAlphabet = provinces[provinceIndex];
+          setProvinceAlphabet(provinceAlphabet);
+          getProvinceMapOpt(provinceAlphabet,province);
+          break;
+        case 3:
+          var provinceIndex = provincesText.findIndex(x => {
+        return province === x
+      });
+      if (provinceIndex === -1) return;
+      var provinceAlphabet = provinces[provinceIndex];
+          setProvinceAlphabet(provinceAlphabet);
+          getCityMapOpt(city);
+          break;
+        default:
+
+          initalMap();
+          break;
+      }
+    },[grade]);
 
 
   // 业务逻辑
@@ -117,8 +142,6 @@ echarts.registerMap('china', china);
       map.setOption(option,true);
       getProvinceDataAndSet(provinceName);  // dispatch action 修改 redux 中数据
 
-
-
       map.off('click');
 
       map.on('click',param => { // 给下级添加点击事件
@@ -186,7 +209,7 @@ echarts.registerMap('china', china);
         <TopWrapper>
           <div id="map">
           </div>
-          {grade > 1 && <div className="back" onClick={() => {back()}}>地图返回</div> }
+          {((grade === 2 && user.user_role === 1) || (grade === 3 && user.user_role <= 2)) && <div className="back" onClick={() => {back()}}>地图返回</div> }
           {show_core  || <div className="back" onClick={() => {dispatch(getShowCoreAction(true))}}>指标返回</div> }
         </TopWrapper>
      </Wrapper>

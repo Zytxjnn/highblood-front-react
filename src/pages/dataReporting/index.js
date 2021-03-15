@@ -1,5 +1,4 @@
-import React,{memo,useEffect,} from "react";
-import {useDispatch,} from 'react-redux';
+import React,{memo,} from "react";
 
 import {Row,Col} from 'antd'
 
@@ -14,6 +13,7 @@ import SideBar from '@/components/sideBar';
 import {
   Wrapper
 } from "./style";
+import Auth from "@/common/authentication";
 
 
 
@@ -22,6 +22,7 @@ export default memo(function DataOverview(props){
 
   return (
     <Wrapper>
+      <Auth/>
       <DataHeader />
       <Row>
         <Col span={6}>

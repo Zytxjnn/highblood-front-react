@@ -5,6 +5,7 @@ const dataReporting = React.lazy(() => import('../pages/dataReporting'));
 const dataCharts = React.lazy(() => import('../pages/dataCharts'));
 const controlIndex = React.lazy(() => import('@/pages/controlIndex'));
 const QualityControlReport = React.lazy(() => import('@/pages/QualityControlReport'));
+const login = React.lazy(() => import('@/pages/login'));
 
 
 
@@ -14,6 +15,7 @@ const router = [
     exact:true,
     component:DataOverView
   },
+
   {
     path:'/dataReporting',
     exact:true,
@@ -33,6 +35,10 @@ const router = [
     path:'/report',
     exact:true,
     component:QualityControlReport
+  },
+  {
+    path:'/login',
+    component:login
   }
 ]
 

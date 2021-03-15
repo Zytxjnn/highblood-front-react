@@ -32,13 +32,13 @@ import {
 } from "./style";
 import Chunk from './components/chunk/chunk';
 import Logs from './components/logs/logs'
-
-
+import {Spin} from "antd";
+import {LoadingOutlined} from "@ant-design/icons";
 
 echarts.registerMap('china', china);
 
 
-  export default memo(function DataViewCenter(){
+export default memo(function DataViewCenter(){
   // props and state
   let map = null;
   const [ProvinceAlphabet,setProvinceAlphabet] = useState('');
@@ -71,7 +71,6 @@ echarts.registerMap('china', china);
         if (provinceIndex === -1) return;
         var provinceAlphabet = provinces[provinceIndex];
         setProvinceAlphabet(provinceAlphabet);
-
         getProvinceMapOpt(provinceAlphabet,province);
         break;
       case 3:
@@ -87,7 +86,7 @@ echarts.registerMap('china', china);
         initalMap();
       break;
     }
-  },[]);
+  },[grade]);
 
 
   // 业务逻辑
@@ -173,7 +172,7 @@ echarts.registerMap('china', china);
     dispatch(getGradeAction(2)); // 改变层级
   }
 
-    useEffect(() => {
+  useEffect(() => {
       switch (grade){
         case 2:
           dispatch(getCountByProvinceAction(province))
@@ -227,6 +226,13 @@ echarts.registerMap('china', china);
     }
   }
 
+    const {count_state} = useSelector(state => ({
+      count_state:state.getIn(['dataReporting','count_state'])
+    }))
+
+
+    const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
+
   return (
     <>
      <Wrapper>
@@ -239,7 +245,7 @@ echarts.registerMap('china', china);
           <div id="map">
           </div>
           {grade > 1 && <div className="back" onClick={() => {back()}}>返回</div> }
-          <div className='center-bg' />
+          {count_state ? <Spin tip="Loading..." indicator={antIcon} /> : '' }
         </TopWrapper>
         <BotWrapper>
           <Logs/>

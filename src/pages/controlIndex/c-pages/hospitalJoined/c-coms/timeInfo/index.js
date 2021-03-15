@@ -25,13 +25,11 @@ export default memo(function (){
       case 4:
         getTimeInfoByHospitalJoined(hospital_joined_name).then(res => {
           setTimeInfo(res.data.content);
-          console.log(res.data.content)
         })
         break;
       case 5:
         getTimeInfoByHospitalJoined(hospital_name).then(res => {
           setTimeInfo(res.data.content);
-          console.log(res.data.content)
         })
         break;
       default:break;

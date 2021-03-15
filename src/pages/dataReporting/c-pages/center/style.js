@@ -18,6 +18,20 @@ export const TopWrapper = styled.div`
   background-size: 100% 100%;
   height: 77vh;
   z-index: 2;
+
+  .ant-spin{
+    z-index: 10;
+    position:absolute;
+    width:100%;
+    height:100%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+  }
   
   #map{
     margin: 0 auto;

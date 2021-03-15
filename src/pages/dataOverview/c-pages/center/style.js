@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   height: 102vh;
   position: relative;
+  
 `
 
 export const TopWrapper = styled.div`
@@ -16,6 +17,7 @@ export const TopWrapper = styled.div`
   background-image:url(${centerTopBg});
   background-size: 100% 100%;
   height: 77vh;
+
 
   
   #map{
