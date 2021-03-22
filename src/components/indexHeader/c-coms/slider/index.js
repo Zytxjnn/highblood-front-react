@@ -1,4 +1,4 @@
-import React,{memo,useEffect} from 'react';
+import React,{memo} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {Slider} from "antd";
 
@@ -21,7 +21,7 @@ export default memo(function DataHeader(){
     3:'市区对比',
   }
 
-  const {grade,province,city,hospital_joined_name,hospital_name} = useSelector(state => ({
+  const {grade} = useSelector(state => ({
     province:state.getIn(['controlIndex','province']),
     city:state.getIn(['controlIndex','city']),
     grade:state.getIn(['controlIndex','grade']),

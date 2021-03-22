@@ -36,10 +36,6 @@ export default memo(function () {
 
 
 
-
-
-
-
   return (
     <Wrapper>
       <Auth/>
@@ -47,7 +43,7 @@ export default memo(function () {
       <Row>
         <Col span={12}>
           {(grade === 1 || grade === 2 || grade === 3) && <Left/>}
-          {!(grade === 1 || grade === 2) && <Joined/>}
+          {!(grade === 1 || grade === 2 || grade === 3) && <Joined/>}
         </Col>
         <Col span={12}>
           <Right/>

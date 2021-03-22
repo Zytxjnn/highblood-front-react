@@ -3,6 +3,7 @@ import {shallowEqual, useSelector} from "react-redux";
 
 import * as echarts from 'echarts';
 import DataHeader from '@/components/dataHeader/';
+import Auth from '@/common/authentication'
 import {
     Wrapper
 } from "@/pages/dataCharts/style";
@@ -20,9 +21,10 @@ export default memo(function DataCharts(props){
   const [Options,setOptions] = useState([]);
   const option = {
     grid:{
-      height:'65%',
+      width:'82%',
+      height:'60%',
       bottom:'10%',
-      left:'15%',
+      left:'10%',
 
     },
     title:{
@@ -31,7 +33,7 @@ export default memo(function DataCharts(props){
       textStyle:{
         color:'#FFF',
         fontWeight:'400',
-        fontSize:18,
+        fontSize:16,
 
       },
       padding:[
@@ -45,7 +47,6 @@ export default memo(function DataCharts(props){
       data: ['19.04', '05', '06', '07','08', '09', '10', '11', '12','01', '02','20.04'],
       axisLabel:{
         interval:0,
-
         color:(e) => {
           return e.length > 2 ? '#19B0FF' :'#D6D7ED'
         },
@@ -54,7 +55,8 @@ export default memo(function DataCharts(props){
       axisLine:{
         lineStyle:{
           color:'#9A9CB8'
-        }
+        },
+
       },
       axisTick:{
         show:false
@@ -135,7 +137,8 @@ export default memo(function DataCharts(props){
             label:{
               show:true,
               position:'top',
-              color:'#fff'
+              color:'#fff',
+              rotate:20
             },
             barBorderRadius:[10,10,0,0]
           }
@@ -170,7 +173,7 @@ export default memo(function DataCharts(props){
       },
     ]
   };
-  const colorList = ['rgba(178, 242, 181, 0.3)','rgba(53, 186, 255, 0.3)','rgba(73, 126, 234, 0.3)'];
+
   let OcolorIndex = [];
   const {province,city,grade} = useSelector(state => ({
     province:state.getIn(['dataReporting','province']),
@@ -215,6 +218,9 @@ export default memo(function DataCharts(props){
 
   const getOption = (i) =>{
     // 赋值
+    if(Options[i].core_name.length >= 30){
+      option.title.textStyle.fontSize = 14;
+    }
     option.title.text = Options[i].core_name;
     option.xAxis.data =   Options[i].x_list;
     option.series[0].data =  Options[i].y_left_list;
@@ -261,6 +267,7 @@ export default memo(function DataCharts(props){
 
     return (
       <Wrapper>
+        <Auth/>
         <DataHeader/>
         {
           JSON.stringify(Options) !== '[]' && <div id="charts">

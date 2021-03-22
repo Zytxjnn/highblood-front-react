@@ -8,6 +8,7 @@ const defaultState = Map({
   province:'',
   city:'',
   content_state:true,
+  rank_state:0, // 切换页面后，左侧通过认证数量排名
 })
 
 function reducer(state = defaultState,action){
@@ -22,6 +23,8 @@ function reducer(state = defaultState,action){
       return state.set('grade',action.grade);
     case actionTypes.CHANGE_CONTENT_STATE:
       return state.set('content_state',action.content_state);
+    case actionTypes.CHANGE_RANK_STATE:
+      return state.set('rank_state',action.rank_state);
     default:
       return state;
   }

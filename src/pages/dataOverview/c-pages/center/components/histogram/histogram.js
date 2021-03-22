@@ -9,15 +9,29 @@ import {
 export default memo(function (){
 
 
-  const {content} = useSelector(state => ({
-    content:state.getIn(['dataOverview','content'])
+  const {content,grade} = useSelector(state => ({
+    content:state.getIn(['dataOverview','content']),
+    grade:state.getIn(['dataReporting','grade']),
+    province:state.getIn(['dataReporting','province']),
+    city:state.getIn(['dataReporting','city']),
   }),shallowEqual);
 
   useEffect(() => {
+    let gradeText = '';
+    switch (grade){
+      case 1:
+        gradeText = '各省';
+        break;
+      case 2:
+        gradeText = '各市';
+        break;
+      case 3:
+        gradeText = '各市';
+    }
     const option = {
       title:{
         show:true,
-          text:'各省注册量、建设中、通过认证数量',
+          text:`${gradeText}注册量、建设中、通过认证数量`,
           y:10,
           x:5,
           textStyle:{

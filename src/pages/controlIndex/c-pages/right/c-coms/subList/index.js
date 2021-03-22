@@ -101,6 +101,7 @@ export default memo(function (){
           default:break;
         }
         getCoreDetail(start,end).then(res => {
+          console.log('1')
           setCompaDate(res.data.data);
         });
         break;

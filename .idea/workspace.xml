@@ -2,44 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1aae494-153c-41fb-8ac4-a9b5af5417a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/authentication/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dataHeader/c-coms/date/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dataHeader/c-coms/date/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/back/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/back/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/network/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/login/c-coms/loginBody/body.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/login/c-coms/loginBody/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/login/c-coms/loginHeader/loginHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/login/c-coms/loginHeader/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/login/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/login/store/actionCreaetor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/login/store/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/login/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/login/store/reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dataHeader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dataHeader/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/indexHeader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/indexHeader/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/authentication/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/authentication/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dataHeader/c-coms/date/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dataHeader/c-coms/date/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dataHeader/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dataHeader/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/indexHeader/c-coms/back/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/back/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/indexHeader/c-coms/search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/search/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/indexHeader/c-coms/slider/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/slider/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sideBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sideBar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/network/dataReporting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/dataReporting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/network/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/timeInfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/timeInfo/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/month6/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/month6/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/scoreInfo/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/scoreInfo/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/left/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/left/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/china/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/china/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/subList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/subList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-coms/nextBtn/nextBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-coms/nextBtn/nextBtn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataCharts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataCharts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataCharts/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataCharts/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/components/histogram/histogram.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/components/histogram/histogram.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/chunk/chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/chunk/chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/normal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/normal/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/normal/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/normal/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/rank/rank.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/rank/rank.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/components/normal/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/components/normal/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/store/actionCreator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/store/actionCreator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/store/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/store/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/store/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/logs/logs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/logs/logs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/logs/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/logs/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/rank/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/rank/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/state/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/state/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/right/components/rank/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/right/components/rank/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/store/actionCreator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/store/actionCreator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/正式.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/c-coms/loginBody/body.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/c-coms/loginBody/body.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/store/actionCreaetor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/store/actionCreaetor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/store/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/store/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/store/reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +182,9 @@
       <workItem from="1615619288970" duration="8890000" />
       <workItem from="1615639767169" duration="8105000" />
       <workItem from="1615703112117" duration="19000" />
-      <workItem from="1615771400340" duration="1401000" />
+      <workItem from="1615771400340" duration="4840000" />
+      <workItem from="1615947284577" duration="15198000" />
+      <workItem from="1615974134368" duration="35685000" />
     </task>
     <servers />
   </component>

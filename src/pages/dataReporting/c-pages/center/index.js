@@ -34,6 +34,7 @@ import Chunk from './components/chunk/chunk';
 import Logs from './components/logs/logs'
 import {Spin} from "antd";
 import {LoadingOutlined} from "@ant-design/icons";
+import {getContentAction} from "@/pages/dataOverview/store/actionCreator";
 
 echarts.registerMap('china', china);
 
@@ -48,12 +49,14 @@ export default memo(function DataViewCenter(){
 
 
   // other hooks
-  const {all_count,province,city,grade} = useSelector(state => {
+  const {all_count,province,city,grade,user,login} = useSelector(state => {
     return {
       all_count:state.getIn(['dataReporting','all_count']),
       province:state.getIn(['dataReporting','province']),
       city:state.getIn(['dataReporting','city']),
       grade:state.getIn(['dataReporting','grade']),
+      user:state.getIn(['user','user']),
+      login:state.getIn(['user','login'])
     }
   },shallowEqual);
 
@@ -63,6 +66,7 @@ export default memo(function DataViewCenter(){
 
   const dispatch = useDispatch();
   useEffect(() =>{
+
     switch (grade){
       case 2:
         var provinceIndex = provincesText.findIndex(x => {
@@ -82,11 +86,14 @@ export default memo(function DataViewCenter(){
         setProvinceAlphabet(provinceAlphabet);
         getCityMapOpt(city);
         break;
-      default:
-        initalMap();
+      case 1:
+        if(user.user_role === 1){
+          dispatch(getContentAction());
+          initalMap();
+        }
       break;
     }
-  },[grade]);
+  },[grade,user]);
 
 
   // 业务逻辑
@@ -239,12 +246,12 @@ export default memo(function DataViewCenter(){
         <TopWrapper>
           <div className='chunks'>
             {all_count  && <Chunk count={all_count.all_count} text='累计填报病例总数' logo={icon1} />}
-            {all_count  && <Chunk count={all_count.today_count} text='今日填报医院数量' logo={icon2} flag={true} />}
-            {all_count  && <Chunk count={all_count.today_org} text='今日填报病例总数' logo={icon3} />}
+            {all_count  && <Chunk count={all_count.today_count} text='今日填报病例总数' logo={icon3}/>}
+            {all_count  && <Chunk count={all_count.today_org} text='今日填报医院数量' logo={icon2}  flag={true}  />}
           </div>
           <div id="map">
           </div>
-          {grade > 1 && <div className="back" onClick={() => {back()}}>返回</div> }
+          { ((grade === 2 && user.user_role === 1) || (grade === 3 && user.user_role <= 2))&& <div className="back" onClick={() => {back()}}>返回</div> }
           {count_state ? <Spin tip="Loading..." indicator={antIcon} /> : '' }
         </TopWrapper>
         <BotWrapper>

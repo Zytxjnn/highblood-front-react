@@ -35,7 +35,7 @@ export default memo(function (props){
            data.map((item,index) => {
              return (
                <div className='info-item' key={index}>
-                 <div className='title'>
+                 <div className='title' title={StandardAndSmartVersion[index]}>
                    <img src={index %2 === 0 ? passedIcon :buildingIcon } alt='建设中' />
                    {StandardAndSmartVersion[index]}
                  </div>

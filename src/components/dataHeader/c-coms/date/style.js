@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 
 export const Wrapper = styled.div`
-  position: fixed;
+  position: absolute;
   right: 2vw;
-  top: 3rem;
+  top: 50%;
   font-size: 1rem;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

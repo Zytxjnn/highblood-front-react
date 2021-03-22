@@ -20,7 +20,7 @@ export const Chunk = styled.div`
   }
   .item-value{
     text-align: right;
-    font-size: 1.80rem;
+    font-size: 1vw;
   }
 `
 

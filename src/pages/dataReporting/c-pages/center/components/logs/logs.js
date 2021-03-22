@@ -48,10 +48,9 @@ export default memo(function (){
             return <div className={index %2 ===0 ? 'border log':'log'}
               title={item.org_name+'于：'+item.add_time + '新增病例'}
               key={index}>
-              {item.org_name}于：{item.add_time}新增病例</div>
+              <marquee>
+              {item.org_name}于：{item.add_time}新增病例</marquee></div>
           })
-
-
         }
       </div>
      </div>

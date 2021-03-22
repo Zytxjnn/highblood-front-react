@@ -9,17 +9,17 @@ export const Wrapper = styled.div`
   overflow-y: scroll;
 
   #charts{
-    padding:1.88rem 3.75rem;
+    padding:1.88rem 2rem;
     display: grid;
     grid-template-columns: repeat(3,30vw);
     grid-template-rows: repeat(3,15rem);
-    grid-row-gap: 1.88rem;
-    grid-column-gap: 2.5rem;
+    grid-row-gap: 4rem;
+    grid-column-gap: 2rem;
   }
 
   #charts .charts-item{
-    width: 27vw;
-    height: 25vh;
+    width: 30vw;
+    height: 30vh;
     color: #fff;
   }
 

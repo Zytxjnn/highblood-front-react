@@ -22,6 +22,7 @@ export const Wrapper = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    white-space: nowrap;
     width: 100%;
     height: 3vh;
     z-index: 2;
@@ -103,6 +104,7 @@ export const Wrapper = styled.div`
     top:1%;
     right: 5%;
     display: flex;
+    align-items: center;
     color:#fff;
     border: 1px solid #00FFFF;
     border-radius: 5px;
@@ -114,6 +116,11 @@ export const Wrapper = styled.div`
         border-right:1px solid #00FFFF ;
       }
       
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 50px;
+      height: 2.5vh;
       text-align: center;
       width: 3vw;
       cursor: pointer;

@@ -92,7 +92,7 @@ export default memo(function (props){
 
   return (
    <Wrapper>
-     <div className="title">标准版认证情况</div>
+     <div className="title">填报情况</div>
      <div className="hover" />
      <div id='blChart'  />
      { count_state && <Spin tip="Loading..." indicator={antIcon} />}

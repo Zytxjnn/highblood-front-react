@@ -57,19 +57,30 @@ export const Wrapper = styled.div`
 `
 
 export const InfoList = styled.div`
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  bottom: 0;
+  height: 27vh;
+  overflow: hidden;
+  transform: translate(-50%,0%);
   .info-list{
-    display: flex;
+    height: 27vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 1.3rem;
-    margin-top: 4vh;
+    padding: 7% 10% 0 10%;
     .info-item{
-      width: 45%;
       color:#fff;
       .title{
-        display: flex;
+       
         align-items: center;
         color:#64B7F7;
+        overflow:hidden ;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
         img{
           margin-right: .5vw;
         }
@@ -83,7 +94,7 @@ export const InfoList = styled.div`
         span:nth-child(1){
           flex: 1;
           text-align: center;
-          font-size: 3rem;
+          font-size: 2.7rem;
           font-weight: 800;
         }
 

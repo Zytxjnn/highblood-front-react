@@ -43,13 +43,14 @@ echarts.registerMap('china', china);
 
 
   // other hooks
-  const {content,province,city,grade,user} = useSelector(state => {
+  const {content,province,city,grade,user,login} = useSelector(state => {
     return {
       content:state.getIn(['dataOverview','content']),
       province:state.getIn(['dataReporting','province']),
       city:state.getIn(['dataReporting','city']),
       grade:state.getIn(['dataReporting','grade']),
       user:state.getIn(['user','user']),
+      login:state.getIn(['user','login'])
     }
   });
 
@@ -77,11 +78,13 @@ echarts.registerMap('china', china);
           getCityMapOpt(city);
           break;
         case 1:
-          dispatch(getContentAction());
-          initalMap();
+          if(user.user_role === 1){
+            dispatch(getContentAction());
+            initalMap();
+          }
           break;
       }
-    },[grade]);
+    },[grade,user]);
 
 
   // 业务逻辑
@@ -139,8 +142,14 @@ echarts.registerMap('china', china);
           emphasis: {
             areaColor: '#6FA7CE' //鼠标移入颜色
           }
-        }
+        },
+
       }
+    }
+    if(grade === 2 && province === '海南'){
+      option.geo.top = '180%';
+      option.geo.left = '80%';
+      option.geo.zoom = '5';
     }
     return option
   }
@@ -219,9 +228,12 @@ echarts.registerMap('china', china);
      <Wrapper>
         <TopWrapper>
           <div className='chunks'>
-            <Chunk count={content.sum_pass_unit} text='通过认证医联体' logo={icon1} />
-            <Chunk count={content.sum_pass_hospital} text='通过认证医院总数' logo={icon2} />
+            {/*<Chunk count={content.sum_pass_unit} text='通过认证医联体' logo={icon1} />*/}
+            {/*<Chunk count={content.sum_pass_hospital} text='通过认证医院总数' logo={icon2} />*/}
+            {/*<Chunk count={content.sum_register_hospital} text='注册医院总数' logo={icon3} />*/}
             <Chunk count={content.sum_register_hospital} text='注册医院总数' logo={icon3} />
+            <Chunk count={content.sum_pass_hospital} text='通过认证医院总数' logo={icon2} />
+            <Chunk count={content.sum_pass_unit} text='通过认证医联' logo={icon1} />
           </div>
           <div id="map">
           </div>

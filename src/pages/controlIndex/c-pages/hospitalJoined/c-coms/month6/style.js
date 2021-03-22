@@ -14,26 +14,32 @@ export const Wrapper = styled.div`
     font-size: 1rem;
   }
   
-  .progress-list .progress{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    line-height: 50px;
-    .progress-month{
-      margin-right: 1rem;
-    }
-    .ant-progress{
+  .progress-list{
+    height: 60%;
+    overflow-y: scroll;
+    
+    .progress{
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      flex:1;
-      
+      line-height:3;
 
-      .ant-progress-inner{
-        width: 96%;
+      .progress-month{
+        margin-right: 1rem;
       }
-      .ant-progress-text{
-        font-size: 1rem;
-        color:#000;
+      .ant-progress{
+        display: flex;
+        align-items: center;
+        flex:1;
+
+
+        .ant-progress-inner{
+          width: 96%;
+        }
+        .ant-progress-text{
+          font-size: 1rem;
+          color:#000;
+        }
       }
     }
   }

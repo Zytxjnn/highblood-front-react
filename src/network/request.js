@@ -1,17 +1,12 @@
 import Axios from 'axios';
-import axios from "axios";
-const token = localStorage.getItem('token');
 
+import {
+  getTokenAction,
+  getUserAction
+} from "@/pages/login/store/actionCreaetor";
+import {useDispatch} from "react-redux";
+import {useHistory} from "react-router-dom";
 
-// Axios.interceptors.response.use(function (response) {
-//   // Do something with response data
-//   console.log(response)
-//   return response;
-// }, function (error) {
-//   // Do something with response error
-//   console.log(error)
-//   return Promise.reject(error);
-// });
 
 const dataOverview = Axios.create({  // 数据概览第一页
   baseURL:'https://www.chinahc.org.cn/apidata'
@@ -21,16 +16,40 @@ const dataReporting = Axios.create({  // 数据概览第二页
 })
 const dataCharts = Axios.create({  // 数据概览第三页
   baseURL:'http://hbqc.ccpmc.org/QualityControlIndex',
-  headers:{
-    'Auth-Token':token
-  }
+  // headers:{
+  //   'Auth-Token':token
+  // }
 })
 const controlIndex = Axios.create({  // 质控指标
   baseURL:'http://hbqc.ccpmc.org',
-  headers:{
-    'Auth-Token':token
-  }
+  // headers:{
+  //   'Auth-Token':token
+  // }
 })
+
+dataCharts.interceptors.request.use(request => {
+  const token = localStorage.getItem('token');
+  if(token){
+    request.headers['Auth-token'] = `${token}`;
+  }
+  return request;
+})
+controlIndex.interceptors.request.use(request => {
+  const token = localStorage.getItem('token');
+  if(token){
+    request.headers['Auth-token'] = `${token}`;
+  }
+  return request;
+})
+dataCharts.interceptors.response.use(function (response) {
+  const code = response.data.code;
+  if(code === 401){
+    console.log('token鉴权失败，跳转登录页');
+  }
+
+  return response;
+
+},);
 
 
 

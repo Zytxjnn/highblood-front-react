@@ -38,42 +38,52 @@ export const getContentByCityAction = (province,city) => {
   }
 }
 
-const changeProvinceAction = (province) => ({
-  type:actionTypes.CHANGE_PROVINCE,
-  province,
-})
-
-export const getProvinceAction = (province) => {
-  return dispatch => {
-    dispatch(changeProvinceAction(province));
-  }
-}
-
-const changCityAction = (city) => ({
-  type:actionTypes.CHANGE_CITY,
-  city,
-})
-
-export const getCityAction = (city) => {
-  return dispatch => {
-    dispatch(changCityAction(city));
-  }
-}
-
-const changGradeAction = (grade) => ({
-  type:actionTypes.CHANGE_GRADE,
-  grade,
-})
-
-export const getGradeAction = (grade) => {
-  return dispatch => {
-    dispatch(changGradeAction(grade));
-  }
-}
+// const changeProvinceAction = (province) => ({
+//   type:actionTypes.CHANGE_PROVINCE,
+//   province,
+// })
+//
+// export const getProvinceAction = (province) => {
+//   return dispatch => {
+//     dispatch(changeProvinceAction(province));
+//   }
+// }
+//
+// const changCityAction = (city) => ({
+//   type:actionTypes.CHANGE_CITY,
+//   city,
+// })
+//
+// export const getCityAction = (city) => {
+//   return dispatch => {
+//     dispatch(changCityAction(city));
+//   }
+// }
+//
+// const changGradeAction = (grade) => ({
+//   type:actionTypes.CHANGE_GRADE,
+//   grade,
+// })
+//
+// export const getGradeAction = (grade) => {
+//   return dispatch => {
+//     dispatch(changGradeAction(grade));
+//   }
+// }
 
 const changeContentState = content_state => ({
   type:actionTypes.CHANGE_CONTENT_STATE,
   content_state
 })
 
+
+const changeRankStateSate = rank_state => ({
+  type:actionTypes.CHANGE_RANK_STATE,
+  rank_state
+})
+export const getRankStateAction = rank_state => {
+  return dispatch => {
+    dispatch(changeRankStateSate(rank_state))
+  }
+}
 

@@ -24,16 +24,19 @@ export default memo(function (){
   const [hospitalList,setHospitalList] = useState([]);  // 医院列表
   const [res,setRes] = useState([]);  // 筛选后结果
 
-  const {province,city,grade} = useSelector(state => ({
+  const {province,city,grade,user} = useSelector(state => ({
     province:state.getIn(['controlIndex','province']),
     city:state.getIn(['controlIndex','city']),
     grade:state.getIn(['controlIndex','grade']),
+    user:state.getIn(['user','user']),
   }),shallowEqual);
 
   const dispatch = useDispatch();
   useEffect(() => {
     switch (grade){
       default:
+        const user_role = JSON.parse(localStorage.getItem('user')).user_role;
+        if(user_role !== 1) return;
         getHospitalJoinedList().then(res => {
           setHospitalList(res.data.data);
           setRes(res.data.data);
@@ -47,14 +50,17 @@ export default memo(function (){
         break;
       case 3:
         getHospitalJoinedListByCity(city).then(res => {
-          setHospitalList(res.data.data);
-          setRes(res.data.data);
+
+          setTimeout(() => {
+            setHospitalList(res.data.data);
+            setRes(res.data.data);
+          },100)
         })
         break;
     }
   },[grade]);
 
-  const onChange = e => { // 深入关键字，筛选医联体
+  const onChange = e => { // 输入关键字，筛选医联体
     const value = e.target.value;
     const arr = hospitalList.filter(item => {
       return item.hospital_name.indexOf(value) !== -1;

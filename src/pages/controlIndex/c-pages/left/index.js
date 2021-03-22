@@ -17,6 +17,7 @@ import {
   TopWrapper,
   Wrapper
 } from "./style";
+import {getContentAction} from "@/pages/dataOverview/store/actionCreator";
 
 
 
@@ -45,32 +46,32 @@ echarts.registerMap('china', china);
 
   const dispatch = useDispatch();
     useEffect(() =>{
-
-      switch (grade){
-        case 2:
-          var provinceIndex = provincesText.findIndex(x => {
+    switch (grade){
+      case 2:
+        var provinceIndex = provincesText.findIndex(x => {
         return province === x
-      });
-      if (provinceIndex === -1) return;
-      var provinceAlphabet = provinces[provinceIndex];
-          setProvinceAlphabet(provinceAlphabet);
-          getProvinceMapOpt(provinceAlphabet,province);
-          break;
-        case 3:
-          var provinceIndex = provincesText.findIndex(x => {
-        return province === x
-      });
-      if (provinceIndex === -1) return;
-      var provinceAlphabet = provinces[provinceIndex];
+        });
+        if (provinceIndex === -1) return;
+        var provinceAlphabet = provinces[provinceIndex];
+            setProvinceAlphabet(provinceAlphabet);
+            getProvinceMapOpt(provinceAlphabet,province);
+        break;
+      case 3:
+        var provinceIndex = provincesText.findIndex(x => {
+          return province === x
+        });
+        if (provinceIndex === -1) return;
+        var provinceAlphabet = provinces[provinceIndex];
           setProvinceAlphabet(provinceAlphabet);
           getCityMapOpt(city);
           break;
-        default:
-
+      case 1:
+        if(user.user_role === 1){
           initalMap();
-          break;
-      }
-    },[grade]);
+        }
+        break;
+    }
+    },[grade,user]);
 
 
   // 业务逻辑

@@ -50,6 +50,7 @@ export const Wrapper = styled.div`
         align-items: center;
         justify-content: center;
         width: 50%;
+        padding:0 1%;
         color: #fff;
         overflow: hidden;
         text-overflow: ellipsis; /*使溢出文字以省略号显示*/

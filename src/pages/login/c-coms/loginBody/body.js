@@ -14,12 +14,10 @@ import {
 } from 'antd';
 
 import {
-  loginByRegionAccount,
-  loginByFillingAccount
+  loginByRegionAccount
 } from '@/network/login';
 
 import {
-  getAccountAction,
   getTokenAction,
   getUserAction
 } from '@/pages/login/store/actionCreaetor';
@@ -33,19 +31,19 @@ export default memo(function DataHeader(){
   const passwordRef = useRef();
 
 
-  const {account} = useSelector(state => {
-    return {
-      account:state.getIn(['user','account']),
-
-    }
-  },shallowEqual);
+  // const {account} = useSelector(state => {
+  //   return {
+  //     account:state.getIn(['user','account']),
+  //
+  //   }
+  // },shallowEqual);
 
 
   const tailLayout = {
     wrapperCol: { offset: 10, span: 16 },
   };
 
-  const [username,setUserName] = useState('testchina');
+  const [username,setUserName] = useState('testsuzhou');
   const [password,setPassword] = useState('admin123456');
   const [remember,setRemember] = useState(true)
 

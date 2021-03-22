@@ -18,6 +18,9 @@ import {
   getProvinceAction,
   getCityAction
 } from '@/pages/dataReporting/store/actionCreator'
+import  {
+  getLogineAction
+} from "@/pages/login/store/actionCreaetor";
 
 import setting from '@/assets/imgs/sideBar/设置.png';
 import overview from '@/assets/imgs/sideBar/数据概览.png';
@@ -82,6 +85,7 @@ export default memo(function DataHeader(){
       dispatch(getGradeAction(1));
       dispatch(getProvinceAction(''));
       dispatch(getCityAction(''));
+
   }
 
   return (

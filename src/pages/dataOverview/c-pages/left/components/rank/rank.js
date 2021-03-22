@@ -1,5 +1,5 @@
 import React,{memo,useState} from 'react';
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 
 import { Progress } from 'antd'
 import {
@@ -7,18 +7,21 @@ import {
 } from './style';
 import {Spin} from "antd";
 import {LoadingOutlined} from "@ant-design/icons";
+import {getRankStateAction} from "@/pages/dataOverview/store/actionCreator";
+
 
 export default memo(function (props){
-  const {content_state} = useSelector(state => ({
-    content_state:state.getIn(['dataOverview','content_state'])
+  const dispatch = useDispatch();
+  const {content_state,rank_state} = useSelector(state => ({
+    content_state:state.getIn(['dataOverview','content_state']),
+    rank_state:state.getIn(['dataOverview','rank_state']),
   }));
   const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
-  const [state,setState] = useState(0);
+
   const indexColor = ['#FFCB3D','#FB28F4','#32D6FF'];
   let data = [];
   let {province,city} = props;
-  data = state ? city : province || [];
-
+  data = rank_state ? city : province || [];
   return (
     <Wrapper>
       <div className="title">通过认证数量排名</div>
@@ -48,8 +51,8 @@ export default memo(function (props){
 
       </div>
       <div className="option">
-        <div className={!state ? 'active' : ''} onClick={() => {setState(0)}}>省</div>
-        <div className={state ? 'active' : ''} onClick={() => {setState(1)}}>市</div>
+        <div className={!rank_state ? 'active' : ''} onClick={() => {dispatch(getRankStateAction(0))}}>省</div>
+        <div className={rank_state ? 'active' : ''} onClick={() => {dispatch(getRankStateAction(1))}}>市</div>
       </div>
       {content_state ? <Spin tip="Loading..." indicator={antIcon} /> : '' }
     </Wrapper>

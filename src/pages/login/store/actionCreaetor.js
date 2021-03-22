@@ -49,5 +49,20 @@ export const getAccountAction = account => {
   }
 }
 
+// 默认请求全国数据，登陆后改变层级，在省级或市级登录后不在默认请求一次全国数据
+const changeLogin = login => {
+  return {
+    type:actionTypes.CHANGE_Login,
+    login
+  }
+}
+export const getLoginAction = login => {
+
+  return  dispatch => {
+
+    dispatch(changeLogin(login))
+  }
+}
+
 
 

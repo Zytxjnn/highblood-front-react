@@ -17,9 +17,10 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     width: 100%;
+    white-space: nowrap;
     height: 3vh;
     z-index: 2;
-    font-size: 2.2vh;
+    font-size: 2.3vh;
     font-weight: bold;
     background: linear-gradient(92deg, #0072FF 0%, #00EAFF 48.8525390625%, #01AAFF 100%);
     -webkit-background-clip: text;
@@ -91,7 +92,7 @@ export const Wrapper = styled.div`
   .option{
     z-index: 3;
     position: absolute;
-    top:1%;
+
     right: 5%;
     display: flex;
     color:#fff;
@@ -105,6 +106,11 @@ export const Wrapper = styled.div`
         border-right:1px solid #00FFFF ;
       }
 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 50px;
+      height: 2.6vh;
       text-align: center;
       width: 3vw;
       cursor: pointer;
