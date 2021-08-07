@@ -1,52 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a1aae494-153c-41fb-8ac4-a9b5af5417a9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/highblood-front.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/highblood-front.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/craco.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/craco.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/reset.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/authentication/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/authentication/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/data-local.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/data-local.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/date-picker/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/date-picker/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/date-picker/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/date-picker/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dataHeader/c-coms/date/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dataHeader/c-coms/date/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/dataHeader/c-coms/date/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dataHeader/c-coms/date/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dataHeader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dataHeader/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/dataHeader/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dataHeader/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/indexHeader/c-coms/back/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/back/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/indexHeader/c-coms/back/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/back/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/indexHeader/c-coms/date/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/date/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/indexHeader/c-coms/date/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/date/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/indexHeader/c-coms/hospitalList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/hospitalList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/indexHeader/c-coms/hospitalList/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/hospitalList/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/indexHeader/c-coms/search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/search/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/indexHeader/c-coms/search/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/search/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/indexHeader/c-coms/slider/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/slider/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/indexHeader/c-coms/slider/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/indexHeader/c-coms/slider/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/indexHeader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/indexHeader/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/indexHeader/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/indexHeader/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loading/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loading/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loading/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loading/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/reportHeader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reportHeader/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/reportHeader/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reportHeader/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sideBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sideBar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sideBar/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sideBar/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/network/controlIndex.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/controlIndex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/network/dataCharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/dataCharts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/network/dataOverview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/dataOverview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/network/dataReporting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/dataReporting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/network/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/network/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/QualityControlReport/c-pages/right/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/QualityControlReport/c-pages/right/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/QualityControlReport/c-pages/right/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/QualityControlReport/c-pages/right/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/QualityControlReport/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/QualityControlReport/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/QualityControlReport/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/QualityControlReport/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/month6/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/month6/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/month6/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/month6/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/scoreInfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/scoreInfo/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/scoreInfo/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/scoreInfo/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/scoreList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/scoreList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/scoreList/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/scoreList/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/timeInfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/timeInfo/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/timeInfo/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/c-coms/timeInfo/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/hospitalJoined/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/left/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/left/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/left/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/left/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/china/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/china/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/china/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/china/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/hospitalListByCore/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/hospitalListByCore/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/hospitalListByCore/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/hospitalListByCore/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/subList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/subList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/subList/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/c-coms/subList/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/c-pages/right/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/store/actionCreator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/store/actionCreator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/store/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/store/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/store/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/controlIndex/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/controlIndex/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataCharts/c-coms/preBtn/preBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataCharts/c-coms/preBtn/preBtn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataCharts/c-coms/preBtn/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataCharts/c-coms/preBtn/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataCharts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataCharts/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataCharts/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataCharts/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-coms/nextBtn/nextBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-coms/nextBtn/nextBtn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-coms/nextBtn/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-coms/nextBtn/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/components/chunk/chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/components/chunk/chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/components/chunk/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/components/chunk/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/components/histogram/histogram.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/components/histogram/histogram.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/components/histogram/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/components/histogram/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/center/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/normal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/normal/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/normal/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/normal/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/rank/rank.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/rank/rank.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/rank/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/components/rank/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/left/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/components/bing/bing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/components/bing/bing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/components/bing/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/components/bing/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/components/normal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/components/normal/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/components/normal/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/components/normal/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/c-pages/right/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/store/actionCreator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/store/actionCreator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/store/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/store/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/store/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataOverview/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataOverview/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-coms/nextBtn/nextBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-coms/nextBtn/nextBtn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-coms/nextBtn/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-coms/nextBtn/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-coms/preBtn/preBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-coms/preBtn/preBtn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-coms/preBtn/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-coms/preBtn/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/chunk/chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/chunk/chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/chunk/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/chunk/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/logs/logs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/logs/logs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/logs/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/components/logs/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/center/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/rank/rank.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/rank/rank.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/rank/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/rank/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/state/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/state/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/state/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/components/state/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/left/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/right/components/rank/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/right/components/rank/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/right/components/rank/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/right/components/rank/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/right/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/right/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/right/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/c-pages/right/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/store/actionCreator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/store/actionCreator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/store/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/store/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/store/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dataReporting/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dataReporting/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/login/c-coms/loginBody/body.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/c-coms/loginBody/body.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/c-coms/loginBody/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/c-coms/loginBody/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/c-coms/loginHeader/loginHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/c-coms/loginHeader/loginHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/c-coms/loginHeader/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/c-coms/loginHeader/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/login/store/actionCreaetor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/store/actionCreaetor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/login/store/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/store/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/login/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/store/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webstorm.webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/webstorm.webpack.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +192,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="settings.webpack" />
     <property name="ts.external.directory.path" value="F:\WebStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -185,6 +286,34 @@
       <workItem from="1615771400340" duration="4840000" />
       <workItem from="1615947284577" duration="15198000" />
       <workItem from="1615974134368" duration="35685000" />
+      <workItem from="1616374690367" duration="3499000" />
+      <workItem from="1616467936996" duration="1747000" />
+      <workItem from="1616481706714" duration="5380000" />
+      <workItem from="1616567965972" duration="694000" />
+      <workItem from="1616637488257" duration="4618000" />
+      <workItem from="1616651612983" duration="11831000" />
+      <workItem from="1616722389110" duration="961000" />
+      <workItem from="1616729319732" duration="4517000" />
+      <workItem from="1616740107733" duration="1209000" />
+      <workItem from="1616998485871" duration="3393000" />
+      <workItem from="1617021983749" duration="226000" />
+      <workItem from="1617093296154" duration="2802000" />
+      <workItem from="1617104205356" duration="708000" />
+      <workItem from="1617141839713" duration="176000" />
+      <workItem from="1617163013294" duration="729000" />
+      <workItem from="1617417013295" duration="902000" />
+      <workItem from="1617611440169" duration="287000" />
+      <workItem from="1617611731112" duration="49000" />
+      <workItem from="1617611816231" duration="35000" />
+      <workItem from="1620624364732" duration="1216000" />
+      <workItem from="1620725030839" duration="668000" />
+      <workItem from="1620728862342" duration="22000" />
+      <workItem from="1621099645033" duration="263000" />
+      <workItem from="1621100198536" duration="46000" />
+      <workItem from="1622276927252" duration="134000" />
+      <workItem from="1622778880864" duration="3000" />
+      <workItem from="1623029697287" duration="423000" />
+      <workItem from="1626190471168" duration="730000" />
     </task>
     <servers />
   </component>

@@ -27,17 +27,17 @@ export default memo(function (props){
     const option = {
       tooltip: {
         trigger: 'item',
-          formatter: '{a} <br/>{b}: {c} ({d}%)'
+          formatter: '{b}: {c} ({d}%)'
       },
       legend: {
           x:'right',
           y:'center',
           orient: 'vertical',
           textStyle:{
-          color:'#fff',
-            fontSize:16
+            color:'#fff',
+            fontSize:14
         },
-        itemGap:20,
+        itemGap:18,
 
       },
       color:['#1792E6','#94D4FF','#2B71FF'],
@@ -54,27 +54,23 @@ export default memo(function (props){
           data: [
             {value: 0, name: '填报中'},
             {value: 0, name: '填报完成'},
-            {value: 0, name: '已审核'},
-            {value: 0, name: '已归档'},
-            {value: 0, name: '诊断中'}
+            {value: 0, name: '审核完成'},
+            {value: 0, name: '归档完成'},
+            {value: 0, name: '转诊中'},
+            {value: 0, name: '转诊收回'},
+            {value: 0, name: '死亡'}
           ],
           label: {
             normal: {
               position:'inner',
+              color:'#000',
               show: false
             },
             emphasis: {
               show: true
             }
           },
-          lableLine: {
-            normal: {
-              show: false
-            },
-            emphasis: {
-              show: true
-            }
-          },
+
         }
       ]
     }

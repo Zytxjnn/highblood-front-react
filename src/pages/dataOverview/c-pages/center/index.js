@@ -8,8 +8,6 @@ import icon1 from '@/assets/imgs/dataOverview/1.png';
 import icon2 from '@/assets/imgs/dataOverview/2.png';
 import icon3 from '@/assets/imgs/dataOverview/3.png';
 import {cityMap} from '@/common/data-local.js'
-// import bmap from 'echarts/extension/bmap/bmap';
-
 
 import {
   getContentAction,
@@ -43,7 +41,7 @@ echarts.registerMap('china', china);
 
 
   // other hooks
-  const {content,province,city,grade,user,login} = useSelector(state => {
+  const {content,province,city,grade,user} = useSelector(state => {
     return {
       content:state.getIn(['dataOverview','content']),
       province:state.getIn(['dataReporting','province']),
@@ -53,6 +51,8 @@ echarts.registerMap('china', china);
       login:state.getIn(['user','login'])
     }
   });
+
+
 
 
   const dispatch = useDispatch();
@@ -102,18 +102,15 @@ echarts.registerMap('china', china);
         return param.name === x
       });
       if (provinceIndex === -1) return;
-      const provinceAlphabet = provinces[provinceIndex]
+      const provinceAlphabet = provinces[provinceIndex];
 
       // 请求省级地图及对应数据
-
       getProvinceMapOpt(provinceAlphabet,param.name);
     })
   }
 
   const getMapOpt = (place) => {
     const option = {
-      //   backgroundColor: '#F3F3F3', //地图背景颜色
-      //以下是地图标题，我在此处设空，需要的可以自己加上
       title: {
         text: '',
         subtext: '',

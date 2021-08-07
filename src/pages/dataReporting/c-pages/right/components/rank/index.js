@@ -20,13 +20,15 @@ export default memo(function (props){
 
   const indexColor = ['#FFCB3D','#FB28F4','#32D6FF'];
   const [List,setList] = useState({});
+  const [Province,setProvince] = useState([]);
   const listRef = useRef();
   const [Count,setCount] = useState(100);
-  const {rank_state,province,city,grade} = useSelector(state => ({
+  const {rank_state,province,city,grade,province_city} = useSelector(state => ({
     rank_state:state.getIn(['dataReporting','rank_state']),
     province:state.getIn(['dataReporting','province']),
     city:state.getIn(['dataReporting','city']),
     grade:state.getIn(['dataReporting','grade']),
+    province_city:state.getIn(['dataReporting','province_city']),
   }))
 
   const dispatch = useDispatch();
@@ -35,18 +37,24 @@ export default memo(function (props){
     switch (grade){
       case 2:
         getRankByProvince(province).then(res => {
-      setList(res.data.data);
-    })
+          setList(res.data.data);
+          setProvince(res.data.data.province_data)
+        })
         break;
       case 3:
         getRankCity(city).then(res => {
-      setList(res.data.data);
-    })
+          setList(res.data.data);
+        }).catch(err => {
+          setList({
+            province_data:Province,
+            city_data:province_city
+          })
+        })
         break;
       default:
         getRank().then(res => {
-      setList(res.data.data);
-    })
+          setList(res.data.data);
+        })
         break;
     }
   },[grade])
@@ -73,7 +81,7 @@ export default memo(function (props){
      <div className="hover" />
      <div className="list" onScroll={e => onListScorll(e)} ref={listRef}>
        {
-         List[rank_state+'_data'] && List[rank_state+'_data'].map((item,index) => {
+         List[rank_state+'_data'] ? List[rank_state+'_data'].map((item,index) => {
            if(index >= Count) return;
            return (
              <div className='item' key={index}>
@@ -88,11 +96,11 @@ export default memo(function (props){
                            trailColor='#193F80'
                            showInfo={false}
                  />
-                 <div className='score'>{item.count}</div>
+                 <div className='score'>{item.count || item.score}</div>
                </div>
              </div>
            )
-         })
+         }) : <div className='nodata'>暂无数据</div>
        }
 
      </div>

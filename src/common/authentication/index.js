@@ -46,8 +46,8 @@ export default memo(function Auth(){
       switch (user.user_role){
         case 1:
           dispatch(getLoginAction(true))
-          // dispatch(getGradeAction(1));
-          // dispatch(getGradeAction2(1));
+          dispatch(getGradeAction(1));
+          dispatch(getGradeAction2(1));
           break;
         case 2:
           dispatch(getProvinceAction(user.province));

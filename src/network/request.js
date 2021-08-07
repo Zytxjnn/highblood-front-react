@@ -1,11 +1,6 @@
 import Axios from 'axios';
-
-import {
-  getTokenAction,
-  getUserAction
-} from "@/pages/login/store/actionCreaetor";
-import {useDispatch} from "react-redux";
-import {useHistory} from "react-router-dom";
+import {HashRouter} from "react-router-dom";
+import {BrowserRouter} from "react-router-dom";
 
 
 const dataOverview = Axios.create({  // 数据概览第一页
@@ -15,16 +10,10 @@ const dataReporting = Axios.create({  // 数据概览第二页
   baseURL:'https://newhyper.chinahc.org.cn/api/v1/qc'
 })
 const dataCharts = Axios.create({  // 数据概览第三页
-  baseURL:'http://hbqc.ccpmc.org/QualityControlIndex',
-  // headers:{
-  //   'Auth-Token':token
-  // }
+  baseURL:'http://hbqc.ccpmc.org/QualityControlIndex'
 })
 const controlIndex = Axios.create({  // 质控指标
-  baseURL:'http://hbqc.ccpmc.org',
-  // headers:{
-  //   'Auth-Token':token
-  // }
+  baseURL:'http://hbqc.ccpmc.org'
 })
 
 dataCharts.interceptors.request.use(request => {
@@ -44,14 +33,23 @@ controlIndex.interceptors.request.use(request => {
 dataCharts.interceptors.response.use(function (response) {
   const code = response.data.code;
   if(code === 401){
-    console.log('token鉴权失败，跳转登录页');
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    const router = new HashRouter()
+    router.history.go('/login')
   }
-
   return response;
-
 },);
-
-
+controlIndex.interceptors.response.use(function (response) {
+  const code = response.data.code;
+  if(code === 401){
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    const router = new BrowserRouter()
+    router.history.go('/login')
+  }
+  return response;
+},);
 
 
 const login = Axios.create({  // 登录

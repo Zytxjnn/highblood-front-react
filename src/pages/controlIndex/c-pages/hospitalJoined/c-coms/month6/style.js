@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
   .progress-list{
     height: 60%;
     overflow-y: scroll;
-    
+    //&::-webkit-scrollbar { width: 0 !important }
     .progress{
       display: flex;
       justify-content: space-between;
@@ -43,6 +43,7 @@ export const Wrapper = styled.div`
       }
     }
   }
+  
   
   .total{
     display: flex;

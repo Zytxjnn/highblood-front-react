@@ -1,5 +1,5 @@
-import React,{memo,useEffect} from 'react';
-import {shallowEqual, useDispatch, useSelector} from "react-redux";
+import React,{memo} from 'react';
+import {shallowEqual, useSelector} from "react-redux";
 
 import IndexHeader from '@/components/indexHeader';
 import Auth from '@/common/authentication'
@@ -12,29 +12,15 @@ import Joined from './c-pages/hospitalJoined';
 import SideBar from '@/components/sideBar'
 import {Col, Row} from "antd";
 
-import {
-  getGradeAction,
-  getProvinceAction,
-  getCityAction
-} from '@/pages/controlIndex/store/actionCreator'
+
 
 export default memo(function () {
   const {grade} = useSelector(state => {
     return {
-      grade:state.getIn(['controlIndex','grade'])
+      grade:state.getIn(['controlIndex','grade']),
+      user:state.getIn(['user','user'])
     }
   },shallowEqual);
-
-
-  const dispatch = useDispatch();
-  useEffect(() => {
-    const user = JSON.parse(localStorage.getItem('user'));
-    dispatch(getGradeAction(user.user_role));
-    dispatch(getProvinceAction(user.province));
-    dispatch(getCityAction(user.city));
-  },[])
-
-
 
   return (
     <Wrapper>

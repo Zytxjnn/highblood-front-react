@@ -17,6 +17,7 @@ import {
   getGradeAction,
   getHospitalJoinedIdAction,
   getHospitalJoinedNameAction,
+  getShowCoreAction
 } from "@/pages/controlIndex/store/actionCreator";
 
 export default memo(function (){
@@ -35,7 +36,8 @@ export default memo(function (){
   useEffect(() => {
     switch (grade){
       default:
-        const user_role = JSON.parse(localStorage.getItem('user')).user_role;
+        const user_role = user.user_role;
+        console.log(user_role === 1)
         if(user_role !== 1) return;
         getHospitalJoinedList().then(res => {
           setHospitalList(res.data.data);
@@ -58,7 +60,7 @@ export default memo(function (){
         })
         break;
     }
-  },[grade]);
+  },[grade,user.user_role]);
 
   const onChange = e => { // 输入关键字，筛选医联体
     const value = e.target.value;
@@ -84,6 +86,7 @@ export default memo(function (){
     dispatch(getCityAction(hospital.city));
     dispatch(getHospitalJoinedIdAction(hospital.hospital_id));
     dispatch(getHospitalJoinedNameAction(hospital.hospital_name));
+    dispatch(getShowCoreAction(true))
     e.stopPropagation();
   }
 

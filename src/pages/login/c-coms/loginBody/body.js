@@ -1,6 +1,6 @@
-import React,{memo,useState,useEffect,useRef} from 'react';
-import {useHistory} from "react-router";
-import {shallowEqual, useDispatch, useSelector} from "react-redux";
+import React,{memo,useState,useRef} from 'react';
+import { useHistory } from "react-router";
+import { useDispatch,} from "react-redux";
 
 import {
   Wrapper
@@ -10,7 +10,6 @@ import {
   Input,
   Button,
   message,
-  Checkbox
 } from 'antd';
 
 import {
@@ -25,19 +24,10 @@ import {
 
 
 export default memo(function DataHeader(){
-  const history = useHistory();
   const dispatch = useDispatch();
+  const history = useHistory();
   const usernameRef = useRef();
   const passwordRef = useRef();
-
-
-  // const {account} = useSelector(state => {
-  //   return {
-  //     account:state.getIn(['user','account']),
-  //
-  //   }
-  // },shallowEqual);
-
 
   const tailLayout = {
     wrapperCol: { offset: 10, span: 16 },
@@ -45,23 +35,6 @@ export default memo(function DataHeader(){
 
   const [username,setUserName] = useState('testsuzhou');
   const [password,setPassword] = useState('admin123456');
-  const [remember,setRemember] = useState(true)
-
-  // useEffect(() => {
-  //     const username = localStorage.getItem('username');
-  //     const password = localStorage.getItem('password');
-  //     setUserName(username)
-  //     setPassword(password)
-  // },[]);
-  //
-  //
-  // useEffect(() => {
-  //   usernameRef.current.input.value = username;
-  // },[username]);
-  // useEffect(() => {
-  //   passwordRef.current.input.value = password;
-  // },[password]);
-
 
   const submit = () => {
      if(username && password){
@@ -72,13 +45,10 @@ export default memo(function DataHeader(){
               message.warn(data.message)
               break;
             case 200: //  登录成功
+              history.push('/');
               dispatch(getTokenAction(data.data.token));  // redux存储token
               dispatch(getUserAction(data.data)); // redux存储用户信息
-              // localStorage.setItem('username',username);
-              // localStorage.setItem('password',password);
-              // remember && dispatch(getAccountAction({username,password}))
-              message.success(data.message);
-              history.push('/');
+ 
           }
        })
      }
@@ -93,9 +63,6 @@ export default memo(function DataHeader(){
   const change2 = e => {
     setPassword(e.target.value);
   }
-  const changeRem = () => {
-    setRemember(!remember)
-  }
 
   return (
     <Wrapper>
@@ -109,7 +76,6 @@ export default memo(function DataHeader(){
             <Input.Password size='large' ref={passwordRef} placeholder='请输入密码' onChange={(e) => {change2(e)}} />
           </Form.Item>
           <Form.Item>
-            {/*<Checkbox checked={remember} onChange={() => changeRem()}>记住密码</Checkbox>*/}
             <span className='forget-psd'>忘记密码</span>
           </Form.Item>
           <Form.Item {...tailLayout}>

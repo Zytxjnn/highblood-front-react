@@ -92,6 +92,8 @@ export default memo(function (props){
       <div className="hover" />
       <div className="list" onScroll={e => onListScorll(e)} ref={listRef}>
         {
+          score_list.length === 0 ? <div className='nodata'>暂无数据</div> :
+
           score_list.map((item,index) => {
             if(index >= Count) return;
             return (

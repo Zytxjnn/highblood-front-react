@@ -12,7 +12,23 @@ export const Wrapper = styled.div`
   width: 95%;
   box-sizing: border-box;
   padding:.3rem 1rem;
-    
+
+  .nodata{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 5vh;
+    background: linear-gradient(92deg, #0072FF 0%, #00EAFF 48.8525390625%, #01AAFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+  }
+  
   >.title{
     display: flex;
     align-items: center;
@@ -119,6 +135,7 @@ export const Wrapper = styled.div`
     .active{
       background-color: #0a4cd3;
     }
+    
   }
 `
 

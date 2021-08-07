@@ -12,6 +12,7 @@ const defaultState = Map({
   score_list:[],
   sub_grade:1,
   rank_state:'province',
+  province_city:[]
 })
 
 function reducer(state = defaultState,action){
@@ -29,6 +30,33 @@ function reducer(state = defaultState,action){
     case actionTypes.CHANGE_LOGS:
       return state.set('logs',action.logs);
     case actionTypes.CHANGE_SCORE_LIST:
+
+        const city = state.get('province_city'),score_list = action.score_list,sub_grade = state.get('sub_grade'),grade = state.get('grade');
+        if((city.length && sub_grade === 2 && grade === 2) || (city.length && sub_grade === 2 && grade === 3)){
+          for(let c in city){
+            if(score_list[c]){
+              if(city[c].name !== score_list[c].name){
+                city[c].score  = score_list[c].score
+              }
+            }
+          }
+          city.sort((a,b)=> {
+            return b.score - a.score
+          })
+          return state.set('score_list',city);
+        }
+        // for(let c of city){
+        //   if(city.length > 0){
+        //     console.log(score_list)
+        //     for(let i in city){
+        //       console.log(city[i].name)
+        //       if(city[i].name !== score_list[i].name){
+        //         score_list.push(city[i])
+        //       }
+        //     }
+        //   }
+        // }
+      // console.log(new Set(...state.get('score_list'),...state.get('province_city')))
       return state.set('score_list',action.score_list);
     case actionTypes.CHANGE_SUB_GRADE:
       return state.set('sub_grade',action.sub_grade);
@@ -36,6 +64,8 @@ function reducer(state = defaultState,action){
       return state.set('rank_state',action.rank_state);
     case actionTypes.CHANGE_COUNT_STATE:
       return state.set('count_state',action.count_state);
+    case actionTypes.CHANGE_PROVINCE_CITY:
+      return state.set('province_city',action.city);
     default:
       return state;
   }

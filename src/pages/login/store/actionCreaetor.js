@@ -57,9 +57,7 @@ const changeLogin = login => {
   }
 }
 export const getLoginAction = login => {
-
   return  dispatch => {
-
     dispatch(changeLogin(login))
   }
 }

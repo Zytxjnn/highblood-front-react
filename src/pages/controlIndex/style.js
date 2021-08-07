@@ -10,5 +10,8 @@ export const Wrapper = styled.div`
       padding: 2rem 3vw;
       height: 100%;
     }
+    .ant-col:nth-child(1){
+      padding-right: 0;
+    }
   }
 `

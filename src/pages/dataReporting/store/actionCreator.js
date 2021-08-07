@@ -116,7 +116,7 @@ export const changScoreListAction = (score_list) => ({
 export const getScoreListAction = (area_type,data_type) => {
   return dispatch => {
     getScoreList(area_type,data_type).then(res => {
-      dispatch(changScoreListAction(res.data.data))
+      dispatch(changScoreListAction(res.data.data.list))
     })
   }
 }
@@ -167,6 +167,16 @@ export const getCountStateAction = count_state => {
   }
 }
 
+// 补足缺少数据的城市
+const getProvinceCity = city => ({
+  type:actionTypes.CHANGE_PROVINCE_CITY,
+  city
+});
+export const getProvinceCityAction = city => {
+  return dispatch => {
+    dispatch(getProvinceCity(city))
+  }
+}
 
 
 

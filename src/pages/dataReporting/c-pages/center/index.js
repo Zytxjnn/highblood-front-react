@@ -22,7 +22,7 @@ import {
   getProvinceAction,
   getCityAction,
   getGradeAction,
-
+  getProvinceCityAction
 } from '@/pages/dataReporting/store/actionCreator';
 
 import {
@@ -49,16 +49,18 @@ export default memo(function DataViewCenter(){
 
 
   // other hooks
-  const {all_count,province,city,grade,user,login} = useSelector(state => {
+  const {all_count,province,city,grade,user,login,count_state} = useSelector(state => {
     return {
       all_count:state.getIn(['dataReporting','all_count']),
       province:state.getIn(['dataReporting','province']),
       city:state.getIn(['dataReporting','city']),
       grade:state.getIn(['dataReporting','grade']),
       user:state.getIn(['user','user']),
-      login:state.getIn(['user','login'])
+      login:state.getIn(['user','login']),
+      count_state:state.getIn(['dataReporting','count_state'])
     }
   },shallowEqual);
+
 
   // useEffect(() => {
   //   console.log(all_count);
@@ -106,6 +108,7 @@ export default memo(function DataViewCenter(){
     map.setOption(getMapOpt(),true);
 
     map.on('click',param => {
+
       // 将文字将为拼音，用于请求地图
       const provinceIndex = provincesText.findIndex(x => {
         return param.name === x
@@ -153,12 +156,28 @@ export default memo(function DataViewCenter(){
         }
       }
     }
+    if(grade === 2 && province === '海南'){
+      option.geo.top = '180%';
+      option.geo.left = '80%';
+      option.geo.zoom = '5';
+    }
     return option
   }
 
   const getProvinceMapOpt = (provinceAlphabet,provinceName) =>{
     map = echarts.init(document.getElementById('map'));
     axios.get('geo/province/' + provinceAlphabet + '.json').then(s => {
+      const cityList = s.data.features;
+      const _arr = cityList.map(item => {
+        return {
+          name:item.properties.name,
+          score:0
+        }
+      });
+      // console.log(_arr)
+      dispatch(getProvinceCityAction(_arr))
+
+
       echarts.registerMap(provinceAlphabet,s.data);
       const option = getMapOpt(provinceAlphabet);
       map.setOption(option,true);
@@ -199,6 +218,14 @@ export default memo(function DataViewCenter(){
     // 将城市名称转为邮政编码
     const code = cityMap[cityName];
     axios.get('geo/city/' + code + '.json').then(s => {
+      const cityList = s.data.features;
+      const _arr = cityList.map(item => {
+        return {
+          name:item.properties.name,
+          score:0
+        }
+      });
+      dispatch(getProvinceCityAction(_arr))
       echarts.registerMap(cityName,s.data);
       const option = getMapOpt(cityName);
       map.setOption(option,true);
@@ -233,9 +260,6 @@ export default memo(function DataViewCenter(){
     }
   }
 
-    const {count_state} = useSelector(state => ({
-      count_state:state.getIn(['dataReporting','count_state'])
-    }))
 
 
     const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;

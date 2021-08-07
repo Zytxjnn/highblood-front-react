@@ -40,7 +40,7 @@ const router = [
     path:'/login',
     component:login
   }
-]
+];
 
 export default router;
 

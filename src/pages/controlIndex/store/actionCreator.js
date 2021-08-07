@@ -50,8 +50,6 @@ export const getCoreDetailByHospitalAction = (start,end,hospital_id) => {
 };
 
 
-
-
 // 开始时间
 const changeStartTimeAction = (start_time) => ({
   type:actionTypes.CHANGE_START_TIME,

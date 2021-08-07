@@ -44,13 +44,13 @@ export default memo(function (){
       <div className="hover"/>
       <div className="logs">
         {
-          logs && logs.map((item,index) => {
+          logs.length ? logs.map((item,index) => {
             return <div className={index %2 ===0 ? 'border log':'log'}
               title={item.org_name+'于：'+item.add_time + '新增病例'}
               key={index}>
               <marquee>
               {item.org_name}于：{item.add_time}新增病例</marquee></div>
-          })
+          }) : <div className='nodata'>暂无数据</div>
         }
       </div>
      </div>

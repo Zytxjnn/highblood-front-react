@@ -131,6 +131,11 @@ echarts.registerMap('china', china);
         }
       }
     }
+    if(grade === 2 && province === '海南'){
+      option.geo.top = '180%';
+      option.geo.left = '110%';
+      option.geo.zoom = '5';
+    }
     return option
   }
 
